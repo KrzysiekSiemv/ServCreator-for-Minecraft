@@ -1,0 +1,13 @@
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.exe.config
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.exe
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.pdb
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csprojAssemblyReference.cache
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.Form1.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.Properties.Resources.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.GenerateResource.cache
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.CoreCompileInputs.cache
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.exe
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.pdb
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.CreateForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.CopyComplete
