@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
+using System.Diagnostics;
+using System.Threading;
 
 namespace ServCreator
 {
     public partial class ControlPanelForm : Form
     {
+        public Process process;
+
         public string configFilePath;
         public string config;
 
@@ -63,6 +67,42 @@ namespace ServCreator
             [JsonProperty]
             public string Engine { get; set; }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    WorkingDirectory = serverPath,
+                    FileName = serverPath + "\\start.bat",
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    RedirectStandardInput = true,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true
+                }
+            };
+
+            Thread thread = new Thread(() =>
+            {
+                process.Start();
+
+                while (!process.StandardOutput.EndOfStream)
+                {
+                    string line = process.StandardOutput.ReadLine();
+                    richTextBox1.Text += line;
+                }
+            });
+
+            thread.Start();
+        }
+
+        private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            process.Kill();   
+            Application.Exit();
         }
     }
 }

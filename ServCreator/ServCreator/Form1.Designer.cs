@@ -35,6 +35,7 @@ namespace ServCreator
             this.createBtn = new System.Windows.Forms.Button();
             this.selectBtn = new System.Windows.Forms.Button();
             this.loadBtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +88,11 @@ namespace ServCreator
             this.loadBtn.TabIndex = 4;
             this.loadBtn.Text = "Load";
             this.loadBtn.UseVisualStyleBackColor = true;
+            this.loadBtn.Click += new System.EventHandler(this.loadBtn_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -118,6 +124,7 @@ namespace ServCreator
         private System.Windows.Forms.Button createBtn;
         private System.Windows.Forms.Button selectBtn;
         private System.Windows.Forms.Button loadBtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

@@ -72,24 +72,6 @@ namespace ServCreator
                 configWriter.Write(JsonConvert.SerializeObject(server));
                 configWriter.Close();
 
-                // Dodawanie wartości do pliku
-                if(File.Exists(Application.StartupPath + "\\servers.json"))
-                {
-                    StreamReader serversReader = new StreamReader(Application.StartupPath + "\\servers.json");
-                    string serversFile = serversReader.ReadToEnd();
-
-                    var servers = JsonConvert.DeserializeObject<List<Server>>(serversFile);
-                    servers.Add(new Server());
-                    var addedServer = JsonConvert.SerializeObject(servers);
-                    StreamWriter serversWriter = new StreamWriter(Application.StartupPath + "\\servers.json");
-                    serversWriter.Write(addedServer);
-                    serversWriter.Close();
-                }
-                else
-                {
-
-                }
-
                 MessageBox.Show("Serwer " + serverNameTB.Text + " został utworzony w folderze: " + serverPathTB.Text + ". Za chwilę zostaniesz przekierowany do panelu kontrolnego.");
 
                 ControlPanelForm controlPanel = new ControlPanelForm(serverPathTB.Text + "\\servmanager.json");

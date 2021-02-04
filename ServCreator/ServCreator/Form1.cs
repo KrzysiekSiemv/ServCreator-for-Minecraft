@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace ServCreator
 {
@@ -21,6 +23,33 @@ namespace ServCreator
         {
             CreateForm createFrm = new CreateForm();
             createFrm.Show();
+        }
+
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ControlPanelForm controlPanel = new ControlPanelForm(openFileDialog1.FileName);
+                controlPanel.Show();
+                this.Visible = false;
+            }
+        }
+
+        [JsonObject(MemberSerialization.OptIn)]
+        public class Server
+        {
+            [JsonProperty]
+            public string Name { get; set; }
+
+            [JsonProperty]
+            public string Path { get; set; }
+
+            [JsonProperty]
+            public string Version { get; set; }
+
+            [JsonProperty]
+            public string Engine { get; set; }
+
         }
     }
 }
