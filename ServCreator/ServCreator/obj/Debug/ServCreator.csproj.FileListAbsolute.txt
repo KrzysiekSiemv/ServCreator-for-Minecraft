@@ -13,3 +13,18 @@ D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\Ser
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.CopyComplete
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.ControlPanelForm.resources
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.PropertiesEditorForm.resources
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.exe.config
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.exe
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.pdb
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csprojAssemblyReference.cache
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.ControlPanelForm.resources
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.CreateForm.resources
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.Form1.resources
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.PropertiesEditorForm.resources
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.Properties.Resources.resources
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.GenerateResource.cache
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.CoreCompileInputs.cache
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.CopyComplete
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.exe
+C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.pdb

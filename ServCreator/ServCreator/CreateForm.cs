@@ -49,7 +49,10 @@ namespace ServCreator
                 progressBar1.Visible = true;
                 WebClient downloader = new WebClient();
                 downloader.DownloadProgressChanged += (s, v) => { progressBar1.Value = v.ProgressPercentage; };
-                downloader.DownloadFileCompleted += (s, v) => { progressBar1.Visible = false; };
+                downloader.DownloadFileCompleted += (s, v) => { 
+                    progressBar1.Visible = false;
+                    MessageBox.Show("Serwer " + serverNameTB.Text + " został utworzony w folderze: " + serverPathTB.Text + ". Za chwilę zostaniesz przekierowany do panelu kontrolnego.");
+                };
                 downloader.DownloadFileAsync(new Uri("https://file.siemv.pl/gry/minecraft/server/" + serverVersionCB.Text + "/" + serverEngineCB.Text + "/" + "server.jar"), serverPathTB.Text + "\\server.jar");
 
                 // Tworzenie pliku EULA
@@ -58,7 +61,7 @@ namespace ServCreator
                 eulaWriter.Close();
 
                 // Tworzenie pliku startowego serwera
-                StreamWriter startWriter = new StreamWriter(serverPathTB.Text + "\\start.cmd");
+                StreamWriter startWriter = new StreamWriter(serverPathTB.Text + "\\start.bat");
                 startWriter.Write("@echo off" + Environment.NewLine + "java -Xms" + minRAM.Value + "M -Xmx" + maxRAM.Value + "M " + argumentsTB.Text + " -jar server.jar nogui");
                 startWriter.Close();
 
@@ -71,8 +74,6 @@ namespace ServCreator
                 StreamWriter configWriter = new StreamWriter(serverPathTB.Text + "\\servmanager.json");
                 configWriter.Write(JsonConvert.SerializeObject(server));
                 configWriter.Close();
-
-                MessageBox.Show("Serwer " + serverNameTB.Text + " został utworzony w folderze: " + serverPathTB.Text + ". Za chwilę zostaniesz przekierowany do panelu kontrolnego.");
 
                 ControlPanelForm controlPanel = new ControlPanelForm(serverPathTB.Text + "\\servmanager.json");
                 controlPanel.Show();
@@ -109,6 +110,11 @@ namespace ServCreator
 
             [JsonProperty]
             public string Engine { get; set; }
+
+        }
+
+        private void CreateForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

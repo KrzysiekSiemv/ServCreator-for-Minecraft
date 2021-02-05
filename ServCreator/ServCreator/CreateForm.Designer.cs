@@ -314,6 +314,7 @@ namespace ServCreator
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CreateForm";
             this.Text = "Server Creator - ServManager for Minecraft";
+            this.Load += new System.EventHandler(this.CreateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.minRAM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxRAM)).EndInit();
             this.ResumeLayout(false);
