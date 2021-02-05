@@ -23,6 +23,7 @@ namespace ServCreator
         {
             CreateForm createFrm = new CreateForm();
             createFrm.Show();
+            this.Visible = false;
         }
 
         private void loadBtn_Click(object sender, EventArgs e)
@@ -50,6 +51,11 @@ namespace ServCreator
             [JsonProperty]
             public string Engine { get; set; }
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            serverList.SelectedIndex = 0;
         }
     }
 }

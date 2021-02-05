@@ -49,10 +49,6 @@ namespace ServCreator
                 progressBar1.Visible = true;
                 WebClient downloader = new WebClient();
                 downloader.DownloadProgressChanged += (s, v) => { progressBar1.Value = v.ProgressPercentage; };
-                downloader.DownloadFileCompleted += (s, v) => { 
-                    progressBar1.Visible = false;
-                    MessageBox.Show("Serwer " + serverNameTB.Text + " został utworzony w folderze: " + serverPathTB.Text + ". Za chwilę zostaniesz przekierowany do panelu kontrolnego.");
-                };
                 downloader.DownloadFileAsync(new Uri("https://file.siemv.pl/gry/minecraft/server/" + serverVersionCB.Text + "/" + serverEngineCB.Text + "/" + "server.jar"), serverPathTB.Text + "\\server.jar");
 
                 // Tworzenie pliku EULA
@@ -75,10 +71,15 @@ namespace ServCreator
                 configWriter.Write(JsonConvert.SerializeObject(server));
                 configWriter.Close();
 
-                ControlPanelForm controlPanel = new ControlPanelForm(serverPathTB.Text + "\\servmanager.json");
-                controlPanel.Show();
+                downloader.DownloadFileCompleted += (s, v) => {
+                    progressBar1.Visible = false;
+                    MessageBox.Show("Server " + serverNameTB.Text + " was created in a folder: " + serverPathTB.Text + ". After a short moment you will be redirected to the control panel.");
 
-                this.Close();
+                    ControlPanelForm controlPanel = new ControlPanelForm(serverPathTB.Text + "\\servmanager.json");
+                    controlPanel.Show();
+
+                    this.Close();
+                };
             }
             else
                 MessageBox.Show("Nie wypełniono wymaganych pól! Uzupełnij je i dopiero wtedy możesz utworzyć serwer");
@@ -115,7 +116,14 @@ namespace ServCreator
 
         private void CreateForm_Load(object sender, EventArgs e)
         {
+            serverEngineCB.SelectedIndex = 0;
+            serverVersionCB.SelectedIndex = 0;
+        }
 
+        private void CreateForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Visible = true;
         }
     }
 }

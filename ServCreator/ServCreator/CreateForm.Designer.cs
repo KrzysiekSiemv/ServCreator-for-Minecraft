@@ -58,9 +58,9 @@ namespace ServCreator
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Server Engine:";
+            this.label1.Text = "Server Engine*:";
             // 
             // serverEngineCB
             // 
@@ -80,9 +80,9 @@ namespace ServCreator
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(157, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 17);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Version:";
+            this.label2.Text = "Version*:";
             // 
             // serverVersionCB
             // 
@@ -138,13 +138,7 @@ namespace ServCreator
             "1.7.5",
             "1.7.4",
             "1.7.3",
-            "1.7.2",
-            "1.7.1",
-            "1.7",
-            "1.6.4",
-            "1.6.2",
-            "1.6.1",
-            "1.6"});
+            "1.7.2"});
             this.serverVersionCB.Location = new System.Drawing.Point(160, 29);
             this.serverVersionCB.Name = "serverVersionCB";
             this.serverVersionCB.Size = new System.Drawing.Size(214, 25);
@@ -155,9 +149,9 @@ namespace ServCreator
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Server Path:";
+            this.label3.Text = "Server Path*:";
             // 
             // selectBtn
             // 
@@ -175,9 +169,9 @@ namespace ServCreator
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 17);
+            this.label4.Size = new System.Drawing.Size(196, 17);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Server Name (in ServManager and Folder):";
+            this.label4.Text = "Server Name (in ServManager)*:";
             // 
             // serverNameTB
             // 
@@ -185,6 +179,7 @@ namespace ServCreator
             this.serverNameTB.Name = "serverNameTB";
             this.serverNameTB.Size = new System.Drawing.Size(362, 25);
             this.serverNameTB.TabIndex = 8;
+            this.serverNameTB.Text = "New Server";
             // 
             // argumentsTB
             // 
@@ -207,9 +202,9 @@ namespace ServCreator
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 17);
+            this.label6.Size = new System.Drawing.Size(147, 17);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Minimum RAM (in MB):";
+            this.label6.Text = "Minimum RAM (in MB)*:";
             // 
             // minRAM
             // 
@@ -222,6 +217,11 @@ namespace ServCreator
             this.minRAM.Name = "minRAM";
             this.minRAM.Size = new System.Drawing.Size(177, 25);
             this.minRAM.TabIndex = 12;
+            this.minRAM.Value = new decimal(new int[] {
+            2048,
+            0,
+            0,
+            0});
             // 
             // maxRAM
             // 
@@ -234,15 +234,20 @@ namespace ServCreator
             this.maxRAM.Name = "maxRAM";
             this.maxRAM.Size = new System.Drawing.Size(177, 25);
             this.maxRAM.TabIndex = 14;
+            this.maxRAM.Value = new decimal(new int[] {
+            2048,
+            0,
+            0,
+            0});
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(194, 153);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 17);
+            this.label7.Size = new System.Drawing.Size(150, 17);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Maximum RAM (in MB):";
+            this.label7.Text = "Maximum RAM (in MB)*:";
             // 
             // createBtn
             // 
@@ -283,13 +288,14 @@ namespace ServCreator
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(142, 28);
             this.progressBar1.TabIndex = 18;
+            this.progressBar1.Visible = false;
             // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(394, 301);
+            this.ClientSize = new System.Drawing.Size(390, 297);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.serverPathTB);
             this.Controls.Add(this.checkJavaBtn);
@@ -314,6 +320,7 @@ namespace ServCreator
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CreateForm";
             this.Text = "Server Creator - ServManager for Minecraft";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateForm_FormClosing);
             this.Load += new System.EventHandler(this.CreateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.minRAM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxRAM)).EndInit();

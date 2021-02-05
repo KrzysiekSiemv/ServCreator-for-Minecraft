@@ -52,6 +52,7 @@ namespace ServCreator
             this.reasonIpTxt = new System.Windows.Forms.RichTextBox();
             this.ipTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.serverLabel = new System.Windows.Forms.Label();
             this.servMgmtBox.SuspendLayout();
             this.playerMgmtBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,14 +75,14 @@ namespace ServCreator
             this.outputText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.outputText.Location = new System.Drawing.Point(175, 12);
             this.outputText.Name = "outputText";
-            this.outputText.Size = new System.Drawing.Size(613, 462);
+            this.outputText.Size = new System.Drawing.Size(613, 556);
             this.outputText.TabIndex = 1;
             this.outputText.Text = "";
             this.outputText.TextChanged += new System.EventHandler(this.outputChanged);
             // 
             // commandInput
             // 
-            this.commandInput.Location = new System.Drawing.Point(175, 482);
+            this.commandInput.Location = new System.Drawing.Point(175, 576);
             this.commandInput.Name = "commandInput";
             this.commandInput.Size = new System.Drawing.Size(518, 20);
             this.commandInput.TabIndex = 2;
@@ -89,7 +90,7 @@ namespace ServCreator
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(699, 480);
+            this.submit.Location = new System.Drawing.Point(699, 574);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(89, 23);
             this.submit.TabIndex = 3;
@@ -126,7 +127,7 @@ namespace ServCreator
             this.servMgmtBox.Controls.Add(this.stopBtn);
             this.servMgmtBox.Controls.Add(this.editProperties);
             this.servMgmtBox.ForeColor = System.Drawing.Color.White;
-            this.servMgmtBox.Location = new System.Drawing.Point(12, 12);
+            this.servMgmtBox.Location = new System.Drawing.Point(12, 134);
             this.servMgmtBox.Name = "servMgmtBox";
             this.servMgmtBox.Size = new System.Drawing.Size(157, 82);
             this.servMgmtBox.TabIndex = 6;
@@ -141,7 +142,7 @@ namespace ServCreator
             this.playerMgmtBox.Controls.Add(this.nicknameTb);
             this.playerMgmtBox.Enabled = false;
             this.playerMgmtBox.ForeColor = System.Drawing.Color.White;
-            this.playerMgmtBox.Location = new System.Drawing.Point(12, 100);
+            this.playerMgmtBox.Location = new System.Drawing.Point(12, 222);
             this.playerMgmtBox.Name = "playerMgmtBox";
             this.playerMgmtBox.Size = new System.Drawing.Size(157, 213);
             this.playerMgmtBox.TabIndex = 7;
@@ -237,7 +238,7 @@ namespace ServCreator
             this.ipBanBox.Controls.Add(this.reasonIpTxt);
             this.ipBanBox.Enabled = false;
             this.ipBanBox.ForeColor = System.Drawing.Color.White;
-            this.ipBanBox.Location = new System.Drawing.Point(12, 321);
+            this.ipBanBox.Location = new System.Drawing.Point(12, 443);
             this.ipBanBox.Name = "ipBanBox";
             this.ipBanBox.Size = new System.Drawing.Size(157, 153);
             this.ipBanBox.TabIndex = 4;
@@ -289,12 +290,22 @@ namespace ServCreator
             this.label4.TabIndex = 4;
             this.label4.Text = "IP Address:";
             // 
+            // serverLabel
+            // 
+            this.serverLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.serverLabel.ForeColor = System.Drawing.Color.White;
+            this.serverLabel.Location = new System.Drawing.Point(12, 12);
+            this.serverLabel.Name = "serverLabel";
+            this.serverLabel.Size = new System.Drawing.Size(157, 119);
+            this.serverLabel.TabIndex = 8;
+            // 
             // ControlPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(800, 514);
+            this.ClientSize = new System.Drawing.Size(800, 608);
+            this.Controls.Add(this.serverLabel);
             this.Controls.Add(this.ipBanBox);
             this.Controls.Add(this.playerMgmtBox);
             this.Controls.Add(this.servMgmtBox);
@@ -342,5 +353,6 @@ namespace ServCreator
         private System.Windows.Forms.Button banIPBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox reasonIpTxt;
+        private System.Windows.Forms.Label serverLabel;
     }
 }

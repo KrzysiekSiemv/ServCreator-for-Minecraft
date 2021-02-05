@@ -42,12 +42,31 @@ namespace ServCreator
 
         private void ControlPanelForm_Load(object sender, EventArgs e)
         {
+            string ip = null;
+            string port = null;
             StreamReader jsonToString = new StreamReader(configFilePath);
             config = jsonToString.ReadToEnd();
             Server server = JsonConvert.DeserializeObject<Server>(config);
 
             serverPath = server.Path;
             serverName = server.Name;
+
+            if(File.Exists(serverPath + "\\server.properties"))
+            {
+                StreamReader streamReader = new StreamReader(serverPath + "\\server.properties");
+
+                string ipLine;
+                string portLine;
+
+                while((ipLine = streamReader.ReadLine()) != null)
+                {
+                    if (ipLine.Contains("server-ip=")) {
+                        ip = ipLine.Replace("server-ip=", "").ToString();
+                    }
+                }
+
+                serverLabel.Text = serverName + Environment.NewLine + ip;
+            }
         }
 
 
