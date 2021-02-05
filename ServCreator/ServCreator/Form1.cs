@@ -14,6 +14,7 @@ namespace ServCreator
 {
     public partial class Form1 : Form
     {
+        static Properties.Settings conf = new Properties.Settings();
         public Form1()
         {
             InitializeComponent();
@@ -55,7 +56,7 @@ namespace ServCreator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            serverList.SelectedIndex = 0;
+
         }
     }
 }

@@ -43,7 +43,10 @@ namespace ServCreator
         private void ControlPanelForm_Load(object sender, EventArgs e)
         {
             string ip = null;
-            string port = null;
+
+            Form1 frm1 = new Form1();
+            frm1.Visible = false;
+
             StreamReader jsonToString = new StreamReader(configFilePath);
             config = jsonToString.ReadToEnd();
             Server server = JsonConvert.DeserializeObject<Server>(config);
@@ -56,7 +59,6 @@ namespace ServCreator
                 StreamReader streamReader = new StreamReader(serverPath + "\\server.properties");
 
                 string ipLine;
-                string portLine;
 
                 while((ipLine = streamReader.ReadLine()) != null)
                 {
@@ -90,6 +92,7 @@ namespace ServCreator
 
         private void button3_Click(object sender, EventArgs e)
         {
+            outputText.Text = "Loading server. Please wait...";
             enableBoxes(true);
             process = new Process
             {
@@ -164,10 +167,11 @@ namespace ServCreator
             playerMgmtBox.Enabled = value;
             ipBanBox.Enabled = value;
             stopBtn.Enabled = value;
+            killBtn.Enabled = value;
             startBtn.Enabled = !value;
         }
 
-        private void stopBtn_Click(object sender, EventArgs e) { process.StandardInput.WriteLine("stop"); enableBoxes(false); }
+        private void stopBtn_Click(object sender, EventArgs e) { process.StandardInput.WriteLine("stop"); enableBoxes(false); outputText.Text += "Server has been stoped."; }
         private void opBtn_Click(object sender, EventArgs e) { process.StandardInput.WriteLine("op " + nicknameTb.Text); }
 
         private void banPlayerBtn_Click(object sender, EventArgs e)
@@ -184,6 +188,13 @@ namespace ServCreator
                 process.StandardInput.WriteLine("ban " + ipTxt.Text + " " + reasonIpTxt.Text);
             else
                 process.StandardInput.WriteLine("ban " + ipTxt.Text);
+        }
+
+        private void killBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/c taskkill /f /im java.exe");
+            enableBoxes(false);
+            outputText.Text += "Server has been killed.";
         }
     }
 }

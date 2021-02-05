@@ -16,6 +16,7 @@ namespace ServCreator
 {
     public partial class CreateForm : Form
     {
+        static Properties.Settings conf = new Properties.Settings();
         public CreateForm()
         {
             InitializeComponent();
@@ -67,15 +68,15 @@ namespace ServCreator
                 server.Path = serverPathTB.Text;
                 server.Engine = serverEngineCB.Text;
                 server.Version = serverVersionCB.Text;
-                StreamWriter configWriter = new StreamWriter(serverPathTB.Text + "\\servmanager.json");
+                StreamWriter configWriter = new StreamWriter(serverPathTB.Text + "\\servmanager.srv");
                 configWriter.Write(JsonConvert.SerializeObject(server));
                 configWriter.Close();
 
                 downloader.DownloadFileCompleted += (s, v) => {
                     progressBar1.Visible = false;
-                    MessageBox.Show("Server " + serverNameTB.Text + " was created in a folder: " + serverPathTB.Text + ". After a short moment you will be redirected to the control panel.");
+                    MessageBox.Show("Server " + serverNameTB.Text + " has been created in: " + serverPathTB.Text + ". After pressing the OK button you'll be taken to the control panel.");
 
-                    ControlPanelForm controlPanel = new ControlPanelForm(serverPathTB.Text + "\\servmanager.json");
+                    ControlPanelForm controlPanel = new ControlPanelForm(serverPathTB.Text + "\\servmanager.srv");
                     controlPanel.Show();
 
                     this.Close();
@@ -102,13 +103,10 @@ namespace ServCreator
         {
             [JsonProperty]
             public string Name { get; set; }
-
             [JsonProperty]
             public string Path { get; set; }
-
             [JsonProperty]
             public string Version { get; set; }
-
             [JsonProperty]
             public string Engine { get; set; }
 
