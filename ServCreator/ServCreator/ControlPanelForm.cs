@@ -68,6 +68,7 @@ namespace ServCreator
                 }
 
                 serverLabel.Text = serverName + Environment.NewLine + ip;
+                streamReader.Close();
             }
         }
 
@@ -111,7 +112,6 @@ namespace ServCreator
             Thread thread = new Thread(() =>
             {
                 process.Start();
-
                 while (!process.StandardOutput.EndOfStream)
                 {
                     string output = process.StandardOutput.ReadLine();
@@ -132,6 +132,8 @@ namespace ServCreator
             });
 
             thread.Start();
+            timer1.Start();
+
         }
 
         private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -164,37 +166,29 @@ namespace ServCreator
 
         void enableBoxes(bool value)
         {
-            playerMgmtBox.Enabled = value;
-            ipBanBox.Enabled = value;
             stopBtn.Enabled = value;
             killBtn.Enabled = value;
             startBtn.Enabled = !value;
         }
 
         private void stopBtn_Click(object sender, EventArgs e) { process.StandardInput.WriteLine("stop"); enableBoxes(false); outputText.Text += "Server has been stoped."; }
-        private void opBtn_Click(object sender, EventArgs e) { process.StandardInput.WriteLine("op " + nicknameTb.Text); }
-
-        private void banPlayerBtn_Click(object sender, EventArgs e)
-        {
-            if(reasonPlayerTxt.Text != "")
-                process.StandardInput.WriteLine("ban " + nicknameTb.Text + " " + reasonPlayerTxt.Text);
-            else
-                process.StandardInput.WriteLine("ban " + nicknameTb.Text);
-        }
-
-        private void banIPBtn_Click(object sender, EventArgs e)
-        {
-            if (reasonIpTxt.Text != "")
-                process.StandardInput.WriteLine("ban " + ipTxt.Text + " " + reasonIpTxt.Text);
-            else
-                process.StandardInput.WriteLine("ban " + ipTxt.Text);
-        }
 
         private void killBtn_Click(object sender, EventArgs e)
         {
             Process.Start("cmd.exe", "/c taskkill /f /im java.exe");
             enableBoxes(false);
             outputText.Text += "Server has been killed.";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ServerManagementForm serverManagement = new ServerManagementForm(configFilePath);
+            serverManagement.Show();
+        }
+
+        private void systemUsage(object sender, EventArgs e)
+        {
+            label2.Text = "RAM Usage: " + process.PrivateMemorySize64; 
         }
     }
 }

@@ -38,7 +38,8 @@ namespace ServCreator
             var nowalinia = Environment.NewLine;
 
             writer = new StreamWriter(pathToEdit);
-            writer.Write("#Minecraft server properties" + nowalinia +
+            string serverproperties =
+                "#Minecraft server properties" + nowalinia +
                 "#" + DateTime.Now + nowalinia +
                 "spawn-protection=" + spawnProtection.Value + nowalinia +
                 "generator-settings=" + generatorSettings.Text + nowalinia +
@@ -64,19 +65,27 @@ namespace ServCreator
                 "white-list=" + whiteList.Checked.ToString().ToLower() + nowalinia +
                 "generate-structures=" + generateStructures.Checked.ToString().ToLower() + nowalinia +
                 "online-mode=" + onlineMode.Checked.ToString().ToLower() + nowalinia +
-                "motd=" + motd.Text + nowalinia
-                );
+                "motd=" + motd.Text + nowalinia;
+            writer.Write(serverproperties);
             writer.Close();
-            MessageBox.Show("ja pier...")
+            MessageBox.Show("Server Properties has been saved.");
         }
 
         private void button1_Click(object sender, EventArgs e) {
             if (tabControl1.SelectedIndex == 1)
                 saveIt();
             else
-                MessageBox.Show("Idź do manualnego, lol");
+                simpleSave();
         }
-        private void button2_Click(object sender, EventArgs e) { saveIt(); this.Close(); }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+                saveIt();
+            else
+                simpleSave();
+            
+            this.Close(); 
+        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

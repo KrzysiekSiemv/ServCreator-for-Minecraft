@@ -29,6 +29,7 @@ namespace ServCreator
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPanelForm));
             this.editProperties = new System.Windows.Forms.Button();
             this.outputText = new System.Windows.Forms.RichTextBox();
@@ -37,27 +38,20 @@ namespace ServCreator
             this.startBtn = new System.Windows.Forms.Button();
             this.killBtn = new System.Windows.Forms.Button();
             this.servMgmtBox = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.stopBtn = new System.Windows.Forms.Button();
-            this.playerMgmtBox = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.kickBtn = new System.Windows.Forms.Button();
-            this.banPlayerBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.reasonPlayerTxt = new System.Windows.Forms.RichTextBox();
-            this.opBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nicknameTb = new System.Windows.Forms.TextBox();
-            this.ipBanBox = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ipTxt = new System.Windows.Forms.TextBox();
-            this.banIPBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.reasonIpTxt = new System.Windows.Forms.RichTextBox();
             this.serverLabel = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.servMgmtBox.SuspendLayout();
-            this.playerMgmtBox.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.ipBanBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // editProperties
@@ -74,16 +68,16 @@ namespace ServCreator
             // outputText
             // 
             this.outputText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.outputText.Location = new System.Drawing.Point(175, 12);
+            this.outputText.Location = new System.Drawing.Point(172, 12);
             this.outputText.Name = "outputText";
-            this.outputText.Size = new System.Drawing.Size(613, 556);
+            this.outputText.Size = new System.Drawing.Size(616, 365);
             this.outputText.TabIndex = 1;
             this.outputText.Text = "";
             this.outputText.TextChanged += new System.EventHandler(this.outputChanged);
             // 
             // commandInput
             // 
-            this.commandInput.Location = new System.Drawing.Point(175, 576);
+            this.commandInput.Location = new System.Drawing.Point(175, 383);
             this.commandInput.Name = "commandInput";
             this.commandInput.Size = new System.Drawing.Size(518, 20);
             this.commandInput.TabIndex = 2;
@@ -91,7 +85,7 @@ namespace ServCreator
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(699, 574);
+            this.submit.Location = new System.Drawing.Point(699, 381);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(89, 23);
             this.submit.TabIndex = 3;
@@ -127,17 +121,30 @@ namespace ServCreator
             // 
             // servMgmtBox
             // 
+            this.servMgmtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.servMgmtBox.Controls.Add(this.button1);
             this.servMgmtBox.Controls.Add(this.stopBtn);
             this.servMgmtBox.Controls.Add(this.startBtn);
             this.servMgmtBox.Controls.Add(this.killBtn);
             this.servMgmtBox.Controls.Add(this.editProperties);
             this.servMgmtBox.ForeColor = System.Drawing.Color.White;
-            this.servMgmtBox.Location = new System.Drawing.Point(12, 109);
+            this.servMgmtBox.Location = new System.Drawing.Point(15, 157);
             this.servMgmtBox.Name = "servMgmtBox";
-            this.servMgmtBox.Size = new System.Drawing.Size(157, 107);
+            this.servMgmtBox.Size = new System.Drawing.Size(157, 140);
             this.servMgmtBox.TabIndex = 6;
             this.servMgmtBox.TabStop = false;
             this.servMgmtBox.Text = "Server Management";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(6, 107);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Open Easy Management";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // stopBtn
             // 
@@ -151,162 +158,6 @@ namespace ServCreator
             this.stopBtn.UseVisualStyleBackColor = true;
             this.stopBtn.Click += new System.EventHandler(this.stopBtn_Click);
             // 
-            // playerMgmtBox
-            // 
-            this.playerMgmtBox.Controls.Add(this.groupBox3);
-            this.playerMgmtBox.Controls.Add(this.opBtn);
-            this.playerMgmtBox.Controls.Add(this.label1);
-            this.playerMgmtBox.Controls.Add(this.nicknameTb);
-            this.playerMgmtBox.Enabled = false;
-            this.playerMgmtBox.ForeColor = System.Drawing.Color.White;
-            this.playerMgmtBox.Location = new System.Drawing.Point(12, 222);
-            this.playerMgmtBox.Name = "playerMgmtBox";
-            this.playerMgmtBox.Size = new System.Drawing.Size(157, 213);
-            this.playerMgmtBox.TabIndex = 7;
-            this.playerMgmtBox.TabStop = false;
-            this.playerMgmtBox.Text = "Player Management";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.kickBtn);
-            this.groupBox3.Controls.Add(this.banPlayerBtn);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.reasonPlayerTxt);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(6, 91);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(145, 117);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Ban or Kick Player";
-            // 
-            // kickBtn
-            // 
-            this.kickBtn.ForeColor = System.Drawing.Color.Black;
-            this.kickBtn.Location = new System.Drawing.Point(77, 85);
-            this.kickBtn.Name = "kickBtn";
-            this.kickBtn.Size = new System.Drawing.Size(62, 23);
-            this.kickBtn.TabIndex = 3;
-            this.kickBtn.Text = "Kick";
-            this.kickBtn.UseVisualStyleBackColor = true;
-            // 
-            // banPlayerBtn
-            // 
-            this.banPlayerBtn.ForeColor = System.Drawing.Color.Black;
-            this.banPlayerBtn.Location = new System.Drawing.Point(6, 85);
-            this.banPlayerBtn.Name = "banPlayerBtn";
-            this.banPlayerBtn.Size = new System.Drawing.Size(62, 23);
-            this.banPlayerBtn.TabIndex = 2;
-            this.banPlayerBtn.Text = "Ban";
-            this.banPlayerBtn.UseVisualStyleBackColor = true;
-            this.banPlayerBtn.Click += new System.EventHandler(this.banPlayerBtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Reason:";
-            // 
-            // reasonPlayerTxt
-            // 
-            this.reasonPlayerTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reasonPlayerTxt.Location = new System.Drawing.Point(6, 36);
-            this.reasonPlayerTxt.Name = "reasonPlayerTxt";
-            this.reasonPlayerTxt.Size = new System.Drawing.Size(133, 42);
-            this.reasonPlayerTxt.TabIndex = 0;
-            this.reasonPlayerTxt.Text = "";
-            // 
-            // opBtn
-            // 
-            this.opBtn.ForeColor = System.Drawing.Color.Black;
-            this.opBtn.Location = new System.Drawing.Point(6, 62);
-            this.opBtn.Name = "opBtn";
-            this.opBtn.Size = new System.Drawing.Size(145, 23);
-            this.opBtn.TabIndex = 2;
-            this.opBtn.Text = "Give OP";
-            this.opBtn.UseVisualStyleBackColor = true;
-            this.opBtn.Click += new System.EventHandler(this.opBtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Player Nickname:";
-            // 
-            // nicknameTb
-            // 
-            this.nicknameTb.Location = new System.Drawing.Point(6, 35);
-            this.nicknameTb.Name = "nicknameTb";
-            this.nicknameTb.Size = new System.Drawing.Size(145, 20);
-            this.nicknameTb.TabIndex = 0;
-            // 
-            // ipBanBox
-            // 
-            this.ipBanBox.Controls.Add(this.label4);
-            this.ipBanBox.Controls.Add(this.ipTxt);
-            this.ipBanBox.Controls.Add(this.banIPBtn);
-            this.ipBanBox.Controls.Add(this.label3);
-            this.ipBanBox.Controls.Add(this.reasonIpTxt);
-            this.ipBanBox.Enabled = false;
-            this.ipBanBox.ForeColor = System.Drawing.Color.White;
-            this.ipBanBox.Location = new System.Drawing.Point(12, 443);
-            this.ipBanBox.Name = "ipBanBox";
-            this.ipBanBox.Size = new System.Drawing.Size(157, 153);
-            this.ipBanBox.TabIndex = 4;
-            this.ipBanBox.TabStop = false;
-            this.ipBanBox.Text = "Ban for Player IP";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "IP Address:";
-            // 
-            // ipTxt
-            // 
-            this.ipTxt.Location = new System.Drawing.Point(6, 36);
-            this.ipTxt.Name = "ipTxt";
-            this.ipTxt.Size = new System.Drawing.Size(145, 20);
-            this.ipTxt.TabIndex = 3;
-            // 
-            // banIPBtn
-            // 
-            this.banIPBtn.ForeColor = System.Drawing.Color.Black;
-            this.banIPBtn.Location = new System.Drawing.Point(6, 123);
-            this.banIPBtn.Name = "banIPBtn";
-            this.banIPBtn.Size = new System.Drawing.Size(145, 23);
-            this.banIPBtn.TabIndex = 2;
-            this.banIPBtn.Text = "Ban";
-            this.banIPBtn.UseVisualStyleBackColor = true;
-            this.banIPBtn.Click += new System.EventHandler(this.banIPBtn_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Reason:";
-            // 
-            // reasonIpTxt
-            // 
-            this.reasonIpTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reasonIpTxt.Location = new System.Drawing.Point(6, 75);
-            this.reasonIpTxt.Name = "reasonIpTxt";
-            this.reasonIpTxt.Size = new System.Drawing.Size(145, 42);
-            this.reasonIpTxt.TabIndex = 0;
-            this.reasonIpTxt.Text = "";
-            // 
             // serverLabel
             // 
             this.serverLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -316,31 +167,99 @@ namespace ServCreator
             this.serverLabel.Size = new System.Drawing.Size(157, 94);
             this.serverLabel.TabIndex = 8;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(12, 303);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(157, 100);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "System Resources Usage";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "RAM Usage:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CPU Usage:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.serverLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(172, 415);
+            this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(172, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(628, 12);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(172, 403);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(628, 12);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(788, 12);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(12, 391);
+            this.panel4.TabIndex = 13;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.systemUsage);
+            // 
             // ControlPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(800, 608);
-            this.Controls.Add(this.serverLabel);
-            this.Controls.Add(this.ipBanBox);
-            this.Controls.Add(this.playerMgmtBox);
+            this.ClientSize = new System.Drawing.Size(800, 415);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.servMgmtBox);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.commandInput);
             this.Controls.Add(this.outputText);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ControlPanelForm";
             this.Text = "Control Panel - ServManager for Minecraft";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ControlPanelForm_FormClosing);
             this.Load += new System.EventHandler(this.ControlPanelForm_Load);
             this.servMgmtBox.ResumeLayout(false);
-            this.playerMgmtBox.ResumeLayout(false);
-            this.playerMgmtBox.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ipBanBox.ResumeLayout(false);
-            this.ipBanBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,22 +274,16 @@ namespace ServCreator
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.Button killBtn;
         private System.Windows.Forms.GroupBox servMgmtBox;
-        private System.Windows.Forms.GroupBox playerMgmtBox;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button kickBtn;
-        private System.Windows.Forms.Button banPlayerBtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox reasonPlayerTxt;
-        private System.Windows.Forms.Button opBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox nicknameTb;
-        private System.Windows.Forms.GroupBox ipBanBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ipTxt;
-        private System.Windows.Forms.Button banIPBtn;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox reasonIpTxt;
         private System.Windows.Forms.Label serverLabel;
         private System.Windows.Forms.Button stopBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
