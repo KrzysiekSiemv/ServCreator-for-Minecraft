@@ -35,39 +35,7 @@ namespace ServCreator
 
         void simpleSave()
         {
-            var nowalinia = Environment.NewLine;
-
-            writer = new StreamWriter(pathToEdit);
-            string serverproperties =
-                "#Minecraft server properties" + nowalinia +
-                "#" + DateTime.Now + nowalinia +
-                "spawn-protection=" + spawnProtection.Value + nowalinia +
-                "generator-settings=" + generatorSettings.Text + nowalinia +
-                "force-gamemode=" + forceGamemode.Checked.ToString().ToLower() + nowalinia +
-                "allow-nether=" + allowNether.Checked.ToString().ToLower() + nowalinia +
-                "gamemode=" + gamemode.Text + nowalinia +
-                "difficulty=" + difficulty.Text + nowalinia +
-                "spawn-monstars=" + spawnMonsters.Checked.ToString().ToLower() + nowalinia +
-                "pvp=" + enablePvp.Checked.ToString().ToLower() + nowalinia +
-                "level-type=default" + nowalinia +
-                "hardcore=" + hardcore.Checked.ToString().ToLower() + nowalinia +
-                "enable-status=" + enableStatus.Checked.ToString().ToLower() + nowalinia +
-                "enable-command-block=" + enableCommandBlocks.Checked.ToString().ToLower() + nowalinia +
-                "max-players=" + maxPlayers.Value + nowalinia +
-                "max-world-size=" + maxWorldSize.Value + nowalinia +
-                "server-port=" + serverPort.Value + nowalinia +
-                "server-ip=" + serverIp.Text + nowalinia +
-                "spawn-npcs=" + spawnNpcs.Checked.ToString().ToLower() + nowalinia +
-                "allow-flight=" + allowFlight.Checked.ToString().ToLower() + nowalinia +
-                "level-name=" + levelName.Text + nowalinia +
-                "view-distance=" + viewDistance.Value + nowalinia +
-                "spawn-animals=" + spawnAnimals.Checked.ToString().ToLower() + nowalinia +
-                "white-list=" + whiteList.Checked.ToString().ToLower() + nowalinia +
-                "generate-structures=" + generateStructures.Checked.ToString().ToLower() + nowalinia +
-                "online-mode=" + onlineMode.Checked.ToString().ToLower() + nowalinia +
-                "motd=" + motd.Text + nowalinia;
-            writer.Write(serverproperties);
-            writer.Close();
+            
             MessageBox.Show("Server Properties has been saved.");
         }
 

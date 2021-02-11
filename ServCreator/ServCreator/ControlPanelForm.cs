@@ -23,6 +23,8 @@ namespace ServCreator
 
         public string serverPath;
         public string serverName;
+
+        ServerManagementForm easyManagementFrm;
         public ControlPanelForm(string configFile)
         {
             InitializeComponent();
@@ -132,27 +134,19 @@ namespace ServCreator
             });
 
             thread.Start();
-            timer1.Start();
-
+            easyManagementFrm = new ServerManagementForm(process);
         }
 
         private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Process.Start("cmd.exe", "/c taskkill /f /im java.exe");
             Application.Exit();
         }
 
-        private void submit_Click(object sender, EventArgs e)
-        {
-            process.StandardInput.WriteLine(commandInput.Text);
-        }
+        private void submit_Click(object sender, EventArgs e) { process.StandardInput.WriteLine(commandInput.Text); commandInput.Text = ""; commandInput.Focus(); }
 
-        private void outputChanged(object sender, EventArgs e)
-        {
-            outputText.SelectionStart = outputText.Text.Length;
-            outputText.ScrollToCaret();
-            commandInput.Focus();
-        }
+        private void easyManagement(object sender, EventArgs e) { easyManagementFrm.Show(); }
+        
+        private void outputChanged(object sender, EventArgs e) { outputText.SelectionStart = outputText.Text.Length; outputText.ScrollToCaret(); }
 
         private void submitCommand(object sender, KeyEventArgs e)
         {
@@ -169,26 +163,34 @@ namespace ServCreator
             stopBtn.Enabled = value;
             killBtn.Enabled = value;
             startBtn.Enabled = !value;
+            easyManagementBtn.Enabled = value;
         }
 
-        private void stopBtn_Click(object sender, EventArgs e) { process.StandardInput.WriteLine("stop"); enableBoxes(false); outputText.Text += "Server has been stoped."; }
+        private void stopBtn_Click(object sender, EventArgs e) 
+        { 
+            process.StandardInput.WriteLine("stop"); 
+            enableBoxes(false); 
+            outputText.Text += "Server has been stoped.";
+            easyManagementFrm.Close();
+        }
 
         private void killBtn_Click(object sender, EventArgs e)
         {
             Process.Start("cmd.exe", "/c taskkill /f /im java.exe");
             enableBoxes(false);
             outputText.Text += "Server has been killed.";
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ServerManagementForm serverManagement = new ServerManagementForm(configFilePath);
-            serverManagement.Show();
+            easyManagementFrm.Close();
         }
 
         private void systemUsage(object sender, EventArgs e)
         {
             label2.Text = "RAM Usage: " + process.PrivateMemorySize64; 
         }
+
+        private void commandInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

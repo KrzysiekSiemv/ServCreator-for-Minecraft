@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 using Newtonsoft.Json;
 
 namespace ServCreator
@@ -58,6 +59,12 @@ namespace ServCreator
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Process process = new Process { 
+                StartInfo = new ProcessStartInfo() { 
+                    FileName = "cmd.exe", Arguments = "/c taskkill /f /im java.exe", UseShellExecute = false, CreateNoWindow = true 
+            }};
+            
+            process.Start();
             Application.Exit();
         }
     }

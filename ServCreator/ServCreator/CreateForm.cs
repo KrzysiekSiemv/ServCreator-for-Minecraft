@@ -72,6 +72,42 @@ namespace ServCreator
                 configWriter.Write(JsonConvert.SerializeObject(server));
                 configWriter.Close();
 
+                // Tworzenie pliku server.properties
+                var nowalinia = Environment.NewLine;
+
+                StreamWriter writer = new StreamWriter(serverPathTB.Text + "\\server.properties");
+                string serverproperties =
+                    "#Minecraft server properties" + nowalinia +
+                    "#" + DateTime.Now + nowalinia +
+                    "spawn-protection=" + spawnProtection.Value + nowalinia +
+                    "generator-settings=" + generatorSettings.Text + nowalinia +
+                    "force-gamemode=" + forceGamemode.Checked.ToString().ToLower() + nowalinia +
+                    "allow-nether=" + allowNether.Checked.ToString().ToLower() + nowalinia +
+                    "gamemode=" + gamemode.SelectedIndex.ToString() + nowalinia +
+                    "difficulty=" + difficulty.SelectedIndex.ToString() + nowalinia +
+                    "spawn-monstars=" + spawnMonsters.Checked.ToString().ToLower() + nowalinia +
+                    "pvp=" + enablePvp.Checked.ToString().ToLower() + nowalinia +
+                    "level-type=default" + nowalinia +
+                    "hardcore=" + hardcore.Checked.ToString().ToLower() + nowalinia +
+                    "enable-status=" + enableStatus.Checked.ToString().ToLower() + nowalinia +
+                    "enable-command-block=" + enableCommandBlocks.Checked.ToString().ToLower() + nowalinia +
+                    "max-players=" + maxPlayers.Value + nowalinia +
+                    "max-world-size=" + maxWorldSize.Value + nowalinia +
+                    "server-port=" + serverPort.Value + nowalinia +
+                    "server-ip=" + serverIp.Text + nowalinia +
+                    "max-build-height=" + maxBuildingHeight.Value.ToString() + nowalinia +
+                    "spawn-npcs=" + spawnNpcs.Checked.ToString().ToLower() + nowalinia +
+                    "allow-flight=" + allowFlight.Checked.ToString().ToLower() + nowalinia +
+                    "level-name=" + levelName.Text + nowalinia +
+                    "view-distance=" + viewDistance.Value + nowalinia +
+                    "spawn-animals=" + spawnAnimals.Checked.ToString().ToLower() + nowalinia +
+                    "white-list=" + whiteList.Checked.ToString().ToLower() + nowalinia +
+                    "generate-structures=" + generateStructures.Checked.ToString().ToLower() + nowalinia +
+                    "online-mode=" + onlineMode.Checked.ToString().ToLower() + nowalinia +
+                    "motd=" + motd.Text + nowalinia;
+                writer.Write(serverproperties);
+                writer.Close();
+
                 downloader.DownloadFileCompleted += (s, v) => {
                     progressBar1.Visible = false;
                     MessageBox.Show("Server " + serverNameTB.Text + " has been created in: " + serverPathTB.Text + ". After pressing the OK button you'll be taken to the control panel.");
@@ -112,16 +148,41 @@ namespace ServCreator
 
         }
 
+        public class Creator
+        {
+            [JsonProperty]
+            public string Versions { get; set; }
+
+            [JsonProperty]
+            public string Engines { get; set; }
+        }
+
         private void CreateForm_Load(object sender, EventArgs e)
         {
             serverEngineCB.SelectedIndex = 0;
             serverVersionCB.SelectedIndex = 0;
+
+            string json = new WebClient().DownloadString("https://raw.githubusercontent.com/KrzysiekSiemv/ServCreator-for-Minecraft/main/creator.json");
+            var x = JsonConvert.DeserializeObject<Creator>(json);
+            foreach (var engine in x.Engines) { serverEngineCB.Items.Add(engine); }
+            foreach (var version in x.Versions) { serverVersionCB.Items.Add(version); }
+            
         }
 
         private void CreateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Visible = true;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://minecraft.gamepedia.com/Server.properties");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://account.mojang.com/documents/minecraft_eula");
         }
     }
 }
