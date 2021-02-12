@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
@@ -24,6 +17,7 @@ namespace ServCreator
         public string serverPath;
         public string serverName;
 
+        Server server;
         ServerManagementForm easyManagementFrm;
         public ControlPanelForm(string configFile)
         {
@@ -46,25 +40,24 @@ namespace ServCreator
         {
             string ip = null;
 
+            GetFreshConfig();
+
             Form1 frm1 = new Form1();
             frm1.Visible = false;
-
-            StreamReader jsonToString = new StreamReader(configFilePath);
-            config = jsonToString.ReadToEnd();
-            Server server = JsonConvert.DeserializeObject<Server>(config);
 
             serverPath = server.Path;
             serverName = server.Name;
 
-            if(File.Exists(serverPath + "\\server.properties"))
+            if (File.Exists(serverPath + "\\server.properties"))
             {
                 StreamReader streamReader = new StreamReader(serverPath + "\\server.properties");
 
                 string ipLine;
 
-                while((ipLine = streamReader.ReadLine()) != null)
+                while ((ipLine = streamReader.ReadLine()) != null)
                 {
-                    if (ipLine.Contains("server-ip=")) {
+                    if (ipLine.Contains("server-ip="))
+                    {
                         ip = ipLine.Replace("server-ip=", "").ToString();
                     }
                 }
@@ -72,9 +65,17 @@ namespace ServCreator
                 serverLabel.Text = serverName + Environment.NewLine + ip;
                 streamReader.Close();
             }
+
+            if (server.Engine != "vanilla")
+                pluginsBtn.Visible = true;
         }
 
-
+        public void GetFreshConfig()
+        {
+            StreamReader jsonToString = new StreamReader(configFilePath);
+            config = jsonToString.ReadToEnd();
+            server = JsonConvert.DeserializeObject<Server>(config);
+        }
 
         [JsonObject(MemberSerialization.OptIn)]
         public class Server
@@ -137,15 +138,9 @@ namespace ServCreator
             easyManagementFrm = new ServerManagementForm(process);
         }
 
-        private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
+        private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e) { Application.Exit(); }
         private void submit_Click(object sender, EventArgs e) { process.StandardInput.WriteLine(commandInput.Text); commandInput.Text = ""; commandInput.Focus(); }
-
         private void easyManagement(object sender, EventArgs e) { easyManagementFrm.Show(); }
-        
         private void outputChanged(object sender, EventArgs e) { outputText.SelectionStart = outputText.Text.Length; outputText.ScrollToCaret(); }
 
         private void submitCommand(object sender, KeyEventArgs e)
@@ -182,15 +177,22 @@ namespace ServCreator
             easyManagementFrm.Close();
         }
 
-        private void systemUsage(object sender, EventArgs e)
-        {
-            label2.Text = "RAM Usage: " + process.PrivateMemorySize64; 
-        }
-
         private void commandInput_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        private void pluginsBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", serverPath + "\\plugins");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            UpgradeServerEngineForm upgrader = new UpgradeServerEngineForm(configFilePath);
+            upgrader.controlPanel = this;
+            upgrader.Show();
+            this.Enabled = false;
+        }
     }
 }

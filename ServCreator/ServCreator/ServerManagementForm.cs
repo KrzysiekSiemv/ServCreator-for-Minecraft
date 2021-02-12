@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -14,14 +7,13 @@ namespace ServCreator
     public partial class ServerManagementForm : Form
     {
         Process process;
-        string config;
         public ServerManagementForm(Process server)
         {
             InitializeComponent();
             process = server;
         }
 
-        private void ServerManagementForm_Load(object sender, EventArgs e) { }
+        private void ServerManagementForm_Load(object sender, EventArgs e) { gmBox.SelectedIndex = 0; }
 
 
         private void banPlayerBtn_Click(object sender, EventArgs e)

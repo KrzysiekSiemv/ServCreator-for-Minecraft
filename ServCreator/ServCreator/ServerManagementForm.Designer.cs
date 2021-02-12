@@ -54,6 +54,8 @@ namespace ServCreator
             this.banPlayerBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.reasonPlayerTxt = new System.Windows.Forms.RichTextBox();
+            this.unbanIpBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.ipBanBox.SuspendLayout();
             this.playerMgmtBox.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -65,6 +67,7 @@ namespace ServCreator
             // 
             // ipBanBox
             // 
+            this.ipBanBox.Controls.Add(this.unbanIpBtn);
             this.ipBanBox.Controls.Add(this.label4);
             this.ipBanBox.Controls.Add(this.ipTxt);
             this.ipBanBox.Controls.Add(this.banIPBtn);
@@ -99,7 +102,7 @@ namespace ServCreator
             this.banIPBtn.ForeColor = System.Drawing.Color.Black;
             this.banIPBtn.Location = new System.Drawing.Point(6, 103);
             this.banIPBtn.Name = "banIPBtn";
-            this.banIPBtn.Size = new System.Drawing.Size(145, 23);
+            this.banIPBtn.Size = new System.Drawing.Size(68, 23);
             this.banIPBtn.TabIndex = 2;
             this.banIPBtn.Text = "Ban";
             this.banIPBtn.UseVisualStyleBackColor = true;
@@ -275,6 +278,7 @@ namespace ServCreator
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.kickBtn);
             this.groupBox3.Controls.Add(this.banPlayerBtn);
             this.groupBox3.Controls.Add(this.label2);
@@ -290,9 +294,9 @@ namespace ServCreator
             // kickBtn
             // 
             this.kickBtn.ForeColor = System.Drawing.Color.Black;
-            this.kickBtn.Location = new System.Drawing.Point(77, 101);
+            this.kickBtn.Location = new System.Drawing.Point(6, 72);
             this.kickBtn.Name = "kickBtn";
-            this.kickBtn.Size = new System.Drawing.Size(62, 23);
+            this.kickBtn.Size = new System.Drawing.Size(133, 23);
             this.kickBtn.TabIndex = 3;
             this.kickBtn.Text = "Kick";
             this.kickBtn.UseVisualStyleBackColor = true;
@@ -323,9 +327,29 @@ namespace ServCreator
             this.reasonPlayerTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.reasonPlayerTxt.Location = new System.Drawing.Point(6, 36);
             this.reasonPlayerTxt.Name = "reasonPlayerTxt";
-            this.reasonPlayerTxt.Size = new System.Drawing.Size(133, 59);
+            this.reasonPlayerTxt.Size = new System.Drawing.Size(133, 30);
             this.reasonPlayerTxt.TabIndex = 0;
             this.reasonPlayerTxt.Text = "";
+            // 
+            // unbanIpBtn
+            // 
+            this.unbanIpBtn.ForeColor = System.Drawing.Color.Black;
+            this.unbanIpBtn.Location = new System.Drawing.Point(83, 102);
+            this.unbanIpBtn.Name = "unbanIpBtn";
+            this.unbanIpBtn.Size = new System.Drawing.Size(68, 23);
+            this.unbanIpBtn.TabIndex = 5;
+            this.unbanIpBtn.Text = "Unban";
+            this.unbanIpBtn.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(77, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(62, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Unban";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // ServerManagementForm
             // 
@@ -337,8 +361,11 @@ namespace ServCreator
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(525, 274);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(525, 274);
             this.Name = "ServerManagementForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage with Server - ServManager for Minecraft";
             this.Load += new System.EventHandler(this.ServerManagementForm_Load);
             this.ipBanBox.ResumeLayout(false);
@@ -382,5 +409,7 @@ namespace ServCreator
         private System.Windows.Forms.Button gmBtn;
         private System.Windows.Forms.ComboBox gmBox;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button unbanIpBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

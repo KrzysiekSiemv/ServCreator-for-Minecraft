@@ -87,21 +87,21 @@ namespace ServCreator
             this.spawnProtection = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.maxBuildingHeight = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.levelType = new System.Windows.Forms.TextBox();
-            this.levelSeed = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.levelSeed = new System.Windows.Forms.TextBox();
+            this.levelType = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.maxBuildingHeight = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.eulaBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.minRAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxRAM)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -111,9 +111,9 @@ namespace ServCreator
             ((System.ComponentModel.ISupportInitialize)(this.maxPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnProtection)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maxBuildingHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxBuildingHeight)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,10 +130,6 @@ namespace ServCreator
             // 
             this.serverEngineCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.serverEngineCB.FormattingEnabled = true;
-            this.serverEngineCB.Items.AddRange(new object[] {
-            "vanilla",
-            "craftbukkit",
-            "spigot"});
             this.serverEngineCB.Location = new System.Drawing.Point(6, 41);
             this.serverEngineCB.Name = "serverEngineCB";
             this.serverEngineCB.Size = new System.Drawing.Size(142, 25);
@@ -153,56 +149,7 @@ namespace ServCreator
             this.serverVersionCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.serverVersionCB.FormattingEnabled = true;
             this.serverVersionCB.Items.AddRange(new object[] {
-            "1.16.5",
-            "1.16.4",
-            "1.16.3",
-            "1.16.2",
-            "1.16.1",
-            "1.16",
-            "1.15.2",
-            "1.15.1",
-            "1.15",
-            "1.14.4",
-            "1.14.3",
-            "1.14.2",
-            "1.14.1",
-            "1.14",
-            "1.13.2",
-            "1.13.1",
-            "1.13",
-            "1.12.2",
-            "1.12.1",
-            "1.12",
-            "1.11.2",
-            "1.11.1",
-            "1.11",
-            "1.10.2",
-            "1.10.1",
-            "1.10",
-            "1.9.4",
-            "1.9.3",
-            "1.9.2",
-            "1.9.1",
-            "1.9",
-            "1.8.9",
-            "1.8.8",
-            "1.8.7",
-            "1.8.6",
-            "1.8.5",
-            "1.8.4",
-            "1.8.3",
-            "1.8.2",
-            "1.8.1",
-            "1.8",
-            "1.7.10",
-            "1.7.9",
-            "1.7.8",
-            "1.7.7",
-            "1.7.6",
-            "1.7.5",
-            "1.7.4",
-            "1.7.3",
-            "1.7.2"});
+            ""});
             this.serverVersionCB.Location = new System.Drawing.Point(154, 41);
             this.serverVersionCB.Name = "serverVersionCB";
             this.serverVersionCB.Size = new System.Drawing.Size(214, 25);
@@ -371,6 +318,7 @@ namespace ServCreator
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.argumentsTB);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(600, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(377, 272);
@@ -806,6 +754,7 @@ namespace ServCreator
             this.groupBox2.Controls.Add(this.difficulty);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.maxPlayers);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(582, 414);
@@ -813,48 +762,76 @@ namespace ServCreator
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Server Properties";
             // 
-            // groupBox3
+            // numericUpDown1
             // 
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.allowNether);
-            this.groupBox3.Controls.Add(this.generateStructures);
-            this.groupBox3.Controls.Add(this.forceGamemode);
-            this.groupBox3.Controls.Add(this.enablePvp);
-            this.groupBox3.Controls.Add(this.allowFlight);
-            this.groupBox3.Controls.Add(this.whiteList);
-            this.groupBox3.Controls.Add(this.onlineMode);
-            this.groupBox3.Controls.Add(this.spawnNpcs);
-            this.groupBox3.Controls.Add(this.spawnAnimals);
-            this.groupBox3.Controls.Add(this.spawnMonsters);
-            this.groupBox3.Controls.Add(this.enableStatus);
-            this.groupBox3.Controls.Add(this.enableCommandBlocks);
-            this.groupBox3.Controls.Add(this.hardcore);
-            this.groupBox3.Location = new System.Drawing.Point(324, 14);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(252, 292);
-            this.groupBox3.TabIndex = 72;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Options";
+            this.numericUpDown1.Location = new System.Drawing.Point(173, 281);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(145, 25);
+            this.numericUpDown1.TabIndex = 82;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             // 
-            // label19
+            // label23
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(597, 344);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(380, 51);
-            this.label19.TabIndex = 73;
-            this.label19.Text = "This server.properties is universal for every Minecraft version.\r\nSome of options" +
-    " can not work in earlier versions properly. You \r\ncan later add or change settin" +
-    "gs on properties in Control Panel.";
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(173, 261);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(129, 17);
+            this.label23.TabIndex = 81;
+            this.label23.Text = "Op Permission Level:";
             // 
-            // label20
+            // levelSeed
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 309);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(128, 17);
-            this.label20.TabIndex = 73;
-            this.label20.Text = "Max Building Height:";
+            this.levelSeed.Location = new System.Drawing.Point(173, 233);
+            this.levelSeed.Name = "levelSeed";
+            this.levelSeed.Size = new System.Drawing.Size(145, 25);
+            this.levelSeed.TabIndex = 80;
+            // 
+            // levelType
+            // 
+            this.levelType.Location = new System.Drawing.Point(9, 377);
+            this.levelType.Name = "levelType";
+            this.levelType.Size = new System.Drawing.Size(155, 25);
+            this.levelType.TabIndex = 79;
+            this.levelType.Text = "default";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 357);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(71, 17);
+            this.label22.TabIndex = 78;
+            this.label22.Text = "Level Type:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(173, 213);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(73, 17);
+            this.label21.TabIndex = 76;
+            this.label21.Text = "Level Seed:";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkColor = System.Drawing.Color.White;
+            this.linkLabel2.Location = new System.Drawing.Point(485, -3);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(97, 17);
+            this.linkLabel2.TabIndex = 75;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Settings Helper";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // maxBuildingHeight
             // 
@@ -878,6 +855,39 @@ namespace ServCreator
             0,
             0});
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 309);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(128, 17);
+            this.label20.TabIndex = 73;
+            this.label20.Text = "Max Building Height:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.allowNether);
+            this.groupBox3.Controls.Add(this.generateStructures);
+            this.groupBox3.Controls.Add(this.forceGamemode);
+            this.groupBox3.Controls.Add(this.enablePvp);
+            this.groupBox3.Controls.Add(this.allowFlight);
+            this.groupBox3.Controls.Add(this.whiteList);
+            this.groupBox3.Controls.Add(this.onlineMode);
+            this.groupBox3.Controls.Add(this.spawnNpcs);
+            this.groupBox3.Controls.Add(this.spawnAnimals);
+            this.groupBox3.Controls.Add(this.spawnMonsters);
+            this.groupBox3.Controls.Add(this.enableStatus);
+            this.groupBox3.Controls.Add(this.enableCommandBlocks);
+            this.groupBox3.Controls.Add(this.hardcore);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(324, 14);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(252, 292);
+            this.groupBox3.TabIndex = 72;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Options";
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -888,96 +898,28 @@ namespace ServCreator
             this.checkBox1.Text = "Enable Rcon";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // linkLabel2
+            // label19
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(485, -3);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(97, 17);
-            this.linkLabel2.TabIndex = 75;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Settings Helper";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(173, 213);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(73, 17);
-            this.label21.TabIndex = 76;
-            this.label21.Text = "Level Seed:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 357);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 17);
-            this.label22.TabIndex = 78;
-            this.label22.Text = "Level Type:";
-            // 
-            // levelType
-            // 
-            this.levelType.Location = new System.Drawing.Point(9, 377);
-            this.levelType.Name = "levelType";
-            this.levelType.Size = new System.Drawing.Size(155, 25);
-            this.levelType.TabIndex = 79;
-            this.levelType.Text = "default";
-            // 
-            // levelSeed
-            // 
-            this.levelSeed.Location = new System.Drawing.Point(173, 233);
-            this.levelSeed.Name = "levelSeed";
-            this.levelSeed.Size = new System.Drawing.Size(145, 25);
-            this.levelSeed.TabIndex = 80;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(173, 261);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(129, 17);
-            this.label23.TabIndex = 81;
-            this.label23.Text = "Op Permission Level:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(173, 281);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(145, 25);
-            this.numericUpDown1.TabIndex = 82;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(597, 344);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(380, 51);
+            this.label19.TabIndex = 73;
+            this.label19.Text = "This server.properties is universal for every Minecraft version.\r\nSome of options" +
+    " can not work in earlier versions properly. You \r\ncan later add or change settin" +
+    "gs on properties in Control Panel.";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.linkLabel3);
-            this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Controls.Add(this.eulaBox);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(600, 290);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(377, 51);
             this.groupBox4.TabIndex = 74;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Minecraft - End User License Agreement";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 20);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(100, 21);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "Accept EULA";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // linkLabel3
             // 
@@ -989,6 +931,16 @@ namespace ServCreator
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Read about EULA ";
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // eulaBox
+            // 
+            this.eulaBox.AutoSize = true;
+            this.eulaBox.Location = new System.Drawing.Point(6, 20);
+            this.eulaBox.Name = "eulaBox";
+            this.eulaBox.Size = new System.Drawing.Size(100, 21);
+            this.eulaBox.TabIndex = 0;
+            this.eulaBox.Text = "Accept EULA";
+            this.eulaBox.UseVisualStyleBackColor = true;
             // 
             // CreateForm
             // 
@@ -1007,7 +959,10 @@ namespace ServCreator
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(1006, 477);
+            this.MinimumSize = new System.Drawing.Size(1006, 477);
             this.Name = "CreateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server Creator - ServManager for Minecraft";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateForm_FormClosing);
             this.Load += new System.EventHandler(this.CreateForm_Load);
@@ -1022,10 +977,10 @@ namespace ServCreator
             ((System.ComponentModel.ISupportInitialize)(this.spawnProtection)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxBuildingHeight)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maxBuildingHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -1106,6 +1061,6 @@ namespace ServCreator
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox eulaBox;
     }
 }

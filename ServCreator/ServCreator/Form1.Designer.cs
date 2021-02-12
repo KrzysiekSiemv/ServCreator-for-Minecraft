@@ -34,6 +34,7 @@ namespace ServCreator
             this.createBtn = new System.Windows.Forms.Button();
             this.loadBtn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@ namespace ServCreator
             // createBtn
             // 
             this.createBtn.ForeColor = System.Drawing.Color.Black;
-            this.createBtn.Location = new System.Drawing.Point(141, 50);
+            this.createBtn.Location = new System.Drawing.Point(176, 50);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(64, 25);
             this.createBtn.TabIndex = 2;
@@ -59,7 +60,7 @@ namespace ServCreator
             // loadBtn
             // 
             this.loadBtn.ForeColor = System.Drawing.Color.Black;
-            this.loadBtn.Location = new System.Drawing.Point(71, 50);
+            this.loadBtn.Location = new System.Drawing.Point(106, 50);
             this.loadBtn.Name = "loadBtn";
             this.loadBtn.Size = new System.Drawing.Size(64, 25);
             this.loadBtn.TabIndex = 4;
@@ -73,12 +74,24 @@ namespace ServCreator
             this.openFileDialog1.Filter = "ServManager File (servmanager.srv)|servmanager.srv";
             this.openFileDialog1.FilterIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(36, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 25);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(276, 104);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.loadBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.label1);
@@ -106,6 +119,7 @@ namespace ServCreator
         private System.Windows.Forms.Button createBtn;
         private System.Windows.Forms.Button loadBtn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

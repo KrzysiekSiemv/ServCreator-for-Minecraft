@@ -29,3 +29,5 @@ C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCre
 C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.exe
 C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.pdb
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.ServerManagementForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.AddServerForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.UpgradeServerEngineForm.resources

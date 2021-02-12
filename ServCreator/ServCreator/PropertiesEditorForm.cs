@@ -23,7 +23,6 @@ namespace ServCreator
             StreamReader streamReader = new StreamReader(pathToEdit);
             richTextBox1.Text = streamReader.ReadToEnd();
             streamReader.Close();
-
         }
 
         void saveIt()
@@ -33,31 +32,7 @@ namespace ServCreator
             writer.Close();
         }
 
-        void simpleSave()
-        {
-            
-            MessageBox.Show("Server Properties has been saved.");
-        }
-
-        private void button1_Click(object sender, EventArgs e) {
-            if (tabControl1.SelectedIndex == 1)
-                saveIt();
-            else
-                simpleSave();
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedIndex == 1)
-                saveIt();
-            else
-                simpleSave();
-            
-            this.Close(); 
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://minecraft.tools/en/motd.php");
-        }
+        private void button1_Click(object sender, EventArgs e) { saveIt(); }
+        private void button2_Click(object sender, EventArgs e) { saveIt(); this.Close(); }
     }
 }

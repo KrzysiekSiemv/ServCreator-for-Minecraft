@@ -29,7 +29,6 @@ namespace ServCreator
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlPanelForm));
             this.editProperties = new System.Windows.Forms.Button();
             this.outputText = new System.Windows.Forms.RichTextBox();
@@ -38,20 +37,18 @@ namespace ServCreator
             this.startBtn = new System.Windows.Forms.Button();
             this.killBtn = new System.Windows.Forms.Button();
             this.servMgmtBox = new System.Windows.Forms.GroupBox();
+            this.pluginsBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.easyManagementBtn = new System.Windows.Forms.Button();
             this.stopBtn = new System.Windows.Forms.Button();
             this.serverLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.servMgmtBox.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +70,7 @@ namespace ServCreator
             this.outputText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.outputText.Location = new System.Drawing.Point(179, 12);
             this.outputText.Name = "outputText";
-            this.outputText.Size = new System.Drawing.Size(609, 371);
+            this.outputText.Size = new System.Drawing.Size(609, 365);
             this.outputText.TabIndex = 1;
             this.outputText.Text = "";
             this.outputText.TextChanged += new System.EventHandler(this.outputChanged);
@@ -128,23 +125,52 @@ namespace ServCreator
             // servMgmtBox
             // 
             this.servMgmtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.servMgmtBox.Controls.Add(this.pluginsBtn);
+            this.servMgmtBox.Controls.Add(this.button1);
             this.servMgmtBox.Controls.Add(this.easyManagementBtn);
             this.servMgmtBox.Controls.Add(this.stopBtn);
             this.servMgmtBox.Controls.Add(this.startBtn);
             this.servMgmtBox.Controls.Add(this.killBtn);
             this.servMgmtBox.Controls.Add(this.editProperties);
             this.servMgmtBox.ForeColor = System.Drawing.Color.White;
-            this.servMgmtBox.Location = new System.Drawing.Point(12, 157);
+            this.servMgmtBox.Location = new System.Drawing.Point(12, 179);
             this.servMgmtBox.Name = "servMgmtBox";
-            this.servMgmtBox.Size = new System.Drawing.Size(157, 140);
+            this.servMgmtBox.Size = new System.Drawing.Size(157, 224);
             this.servMgmtBox.TabIndex = 6;
             this.servMgmtBox.TabStop = false;
             this.servMgmtBox.Text = "Server Management";
             // 
+            // pluginsBtn
+            // 
+            this.pluginsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pluginsBtn.ForeColor = System.Drawing.Color.Black;
+            this.pluginsBtn.Location = new System.Drawing.Point(6, 137);
+            this.pluginsBtn.Name = "pluginsBtn";
+            this.pluginsBtn.Size = new System.Drawing.Size(145, 23);
+            this.pluginsBtn.TabIndex = 9;
+            this.pluginsBtn.Text = "Open Plugins Folder";
+            this.pluginsBtn.UseVisualStyleBackColor = true;
+            this.pluginsBtn.Visible = false;
+            this.pluginsBtn.Click += new System.EventHandler(this.pluginsBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(6, 166);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Change Server Engine";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // easyManagementBtn
             // 
+            this.easyManagementBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.easyManagementBtn.Enabled = false;
             this.easyManagementBtn.ForeColor = System.Drawing.Color.Black;
-            this.easyManagementBtn.Location = new System.Drawing.Point(6, 107);
+            this.easyManagementBtn.Location = new System.Drawing.Point(6, 195);
             this.easyManagementBtn.Name = "easyManagementBtn";
             this.easyManagementBtn.Size = new System.Drawing.Size(145, 23);
             this.easyManagementBtn.TabIndex = 7;
@@ -173,40 +199,8 @@ namespace ServCreator
             this.serverLabel.Size = new System.Drawing.Size(157, 94);
             this.serverLabel.TabIndex = 8;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 303);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(157, 100);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "System Resources Usage";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "RAM Usage:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CPU Usage:";
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.serverLabel);
             this.panel1.Controls.Add(this.servMgmtBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -239,11 +233,6 @@ namespace ServCreator
             this.panel4.Size = new System.Drawing.Size(12, 391);
             this.panel4.TabIndex = 13;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.systemUsage);
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.commandInput);
@@ -254,6 +243,14 @@ namespace ServCreator
             this.panel5.Size = new System.Drawing.Size(609, 20);
             this.panel5.TabIndex = 14;
             // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(179, 377);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(609, 6);
+            this.panel6.TabIndex = 15;
+            // 
             // ControlPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +258,7 @@ namespace ServCreator
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.outputText);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -268,12 +266,11 @@ namespace ServCreator
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ControlPanelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Panel - ServManager for Minecraft";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ControlPanelForm_FormClosing);
             this.Load += new System.EventHandler(this.ControlPanelForm_Load);
             this.servMgmtBox.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -293,14 +290,13 @@ namespace ServCreator
         private System.Windows.Forms.Label serverLabel;
         private System.Windows.Forms.Button stopBtn;
         private System.Windows.Forms.Button easyManagementBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button pluginsBtn;
     }
 }

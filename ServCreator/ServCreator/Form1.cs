@@ -67,5 +67,12 @@ namespace ServCreator
             process.Start();
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddServerForm addServer = new AddServerForm();
+            addServer.Show();
+            this.Visible = false;
+        }
     }
 }
