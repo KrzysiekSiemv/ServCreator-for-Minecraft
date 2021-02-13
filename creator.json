@@ -2,8 +2,7 @@
     "engines":[
         "craftbukkit",
         "spigot",
-        "vanilla",
-        "paper"
+        "vanilla"
     ],
     "versions": [
         "1.16.5",
