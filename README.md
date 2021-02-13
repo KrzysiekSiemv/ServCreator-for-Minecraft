@@ -6,7 +6,7 @@ Prosty kreator serwerów lokalnych dla gry Minecraft. Bedzie miał także funkcj
 <br><br>
 Required: .NET Framework 4.7; Java SE Runtime Environment (any version).<br>
 
-Screenshots:
+Screenshots:<br><br>
 <img src="https://i.imgur.com/0EEaYOS.png" width="480" /><br><br>
 <img src="https://i.imgur.com/CM4iDvW.png" width="480" /><br><br>
 <img src="https://i.imgur.com/YUvl5x2.png" width="480" /><br><br>
