@@ -7,10 +7,10 @@ Prosty kreator serwerów lokalnych dla gry Minecraft. Bedzie miał także funkcj
 Required: .NET Framework 4.7; Java SE Runtime Environment (any version).<br>
 
 Screenshots:<br><br>
-<center><img src="https://i.imgur.com/0EEaYOS.png" width="480" /><br><br>
+<p align="center"><img src="https://i.imgur.com/0EEaYOS.png" width="480" /><br><br>
 <img src="https://i.imgur.com/CM4iDvW.png" width="480" /><br><br>
 <img src="https://i.imgur.com/YUvl5x2.png" width="480" /><br><br>
-<img src="https://i.imgur.com/yfEXXce.png" width="480" /><br><br></center>
+<img src="https://i.imgur.com/yfEXXce.png" width="480" /><br><br></p>
 
 
 <br><br>Jeżeli masz jakieś pomysły co do projektu, dodaj Issue, a ja rozpatrze to w jak najszybszym czasie.
