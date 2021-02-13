@@ -1,13 +1,7 @@
-D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.exe.config
-D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.exe
-D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServCreator.pdb
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csprojAssemblyReference.cache
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.Form1.resources
-D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.Properties.Resources.resources
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.GenerateResource.cache
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.CoreCompileInputs.cache
-D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.exe
-D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.pdb
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.CreateForm.resources
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\Newtonsoft.Json.dll
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.csproj.CopyComplete
@@ -31,3 +25,14 @@ C:\Users\Krzysiek\Documents\GitHub\ServCreator-for-Minecraft\ServCreator\ServCre
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.ServerManagementForm.resources
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.AddServerForm.resources
 D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServCreator.UpgradeServerEngineForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServManager.Properties.Resources.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServManager for Minecraft.exe.config
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServManager for Minecraft.exe.manifest
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServManager for Minecraft.application
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServManager for Minecraft.exe
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Debug\ServManager for Minecraft.pdb
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServManager for Minecraft.TrustInfo.xml
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServManager for Minecraft.exe.manifest
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServManager for Minecraft.application
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServManager for Minecraft.exe
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Debug\ServManager for Minecraft.pdb

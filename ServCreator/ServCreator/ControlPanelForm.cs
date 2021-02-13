@@ -17,6 +17,8 @@ namespace ServCreator
         public string serverPath;
         public string serverName;
 
+        string ip;
+
         Server server;
         ServerManagementForm easyManagementFrm;
         public ControlPanelForm(string configFile)
@@ -38,12 +40,18 @@ namespace ServCreator
 
         private void ControlPanelForm_Load(object sender, EventArgs e)
         {
-            string ip = null;
-
-            GetFreshConfig();
-
             Form1 frm1 = new Form1();
             frm1.Visible = false;
+
+            GetFreshConfig();
+        }
+
+        public void GetFreshConfig()
+        {
+            StreamReader jsonToString = new StreamReader(configFilePath);
+            config = jsonToString.ReadToEnd();
+            server = JsonConvert.DeserializeObject<Server>(config);
+            jsonToString.Close();
 
             serverPath = server.Path;
             serverName = server.Name;
@@ -62,19 +70,15 @@ namespace ServCreator
                     }
                 }
 
-                serverLabel.Text = serverName + Environment.NewLine + ip;
                 streamReader.Close();
             }
 
+            var n = Environment.NewLine;
+
+            serverLabel.Text = "Name: " + n + serverName + n + n + "IP Address: " + n + ip + n + n + "Engine: " + n + server.Engine + n + n + "Version: " + n + server.Version;
+
             if (server.Engine != "vanilla")
                 pluginsBtn.Visible = true;
-        }
-
-        public void GetFreshConfig()
-        {
-            StreamReader jsonToString = new StreamReader(configFilePath);
-            config = jsonToString.ReadToEnd();
-            server = JsonConvert.DeserializeObject<Server>(config);
         }
 
         [JsonObject(MemberSerialization.OptIn)]
@@ -96,7 +100,7 @@ namespace ServCreator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            outputText.Text = "Loading server. Please wait...";
+            outputText.Text = "Loading server. Please wait... Sometimes you have to wait 20 seconds to start, when you're using an older version of server engine. (error about outdated engine)" + Environment.NewLine;
             enableBoxes(true);
             process = new Process
             {
@@ -135,12 +139,15 @@ namespace ServCreator
             });
 
             thread.Start();
-            easyManagementFrm = new ServerManagementForm(process);
         }
 
         private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e) { Application.Exit(); }
         private void submit_Click(object sender, EventArgs e) { process.StandardInput.WriteLine(commandInput.Text); commandInput.Text = ""; commandInput.Focus(); }
-        private void easyManagement(object sender, EventArgs e) { easyManagementFrm.Show(); }
+        private void easyManagement(object sender, EventArgs e)
+        {
+            easyManagementFrm = new ServerManagementForm(process);
+            easyManagementFrm.Show();
+        }
         private void outputChanged(object sender, EventArgs e) { outputText.SelectionStart = outputText.Text.Length; outputText.ScrollToCaret(); }
 
         private void submitCommand(object sender, KeyEventArgs e)
@@ -166,7 +173,6 @@ namespace ServCreator
             process.StandardInput.WriteLine("stop"); 
             enableBoxes(false); 
             outputText.Text += "Server has been stoped.";
-            easyManagementFrm.Close();
         }
 
         private void killBtn_Click(object sender, EventArgs e)
@@ -174,12 +180,6 @@ namespace ServCreator
             Process.Start("cmd.exe", "/c taskkill /f /im java.exe");
             enableBoxes(false);
             outputText.Text += "Server has been killed.";
-            easyManagementFrm.Close();
-        }
-
-        private void commandInput_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pluginsBtn_Click(object sender, EventArgs e)
@@ -192,7 +192,8 @@ namespace ServCreator
             UpgradeServerEngineForm upgrader = new UpgradeServerEngineForm(configFilePath);
             upgrader.controlPanel = this;
             upgrader.Show();
-            this.Enabled = false;
+
+            this.Visible = false;
         }
     }
 }

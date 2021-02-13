@@ -1,0 +1,23 @@
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Release\ServManager for Minecraft.exe.config
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Release\ServManager for Minecraft.exe.manifest
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Release\ServManager for Minecraft.application
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Release\ServManager for Minecraft.exe
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Release\ServManager for Minecraft.pdb
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\bin\Release\Newtonsoft.Json.dll
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.csprojAssemblyReference.cache
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.AddServerForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.ControlPanelForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.CreateForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.Form1.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.PropertiesEditorForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServManager.Properties.Resources.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.ServerManagementForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.UpgradeServerEngineForm.resources
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.csproj.GenerateResource.cache
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.csproj.CoreCompileInputs.cache
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServManager for Minecraft.TrustInfo.xml
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServManager for Minecraft.exe.manifest
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServManager for Minecraft.application
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServCreator.csproj.CopyComplete
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServManager for Minecraft.exe
+D:\GitHub (krzysiek-smaga@outlook.com)\ServCreator-for-Minecraft\ServCreator\ServCreator\obj\Release\ServManager for Minecraft.pdb

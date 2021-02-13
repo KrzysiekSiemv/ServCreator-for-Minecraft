@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ServCreator.Properties {
+namespace ServManager.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,42 +20,6 @@ namespace ServCreator.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string lastUsed01 {
-            get {
-                return ((string)(this["lastUsed01"]));
-            }
-            set {
-                this["lastUsed01"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string lastUsed02 {
-            get {
-                return ((string)(this["lastUsed02"]));
-            }
-            set {
-                this["lastUsed02"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string lastUsed03 {
-            get {
-                return ((string)(this["lastUsed03"]));
-            }
-            set {
-                this["lastUsed03"] = value;
             }
         }
     }

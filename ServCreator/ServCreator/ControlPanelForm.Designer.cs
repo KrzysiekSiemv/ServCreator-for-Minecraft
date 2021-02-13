@@ -70,7 +70,7 @@ namespace ServCreator
             this.outputText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.outputText.Location = new System.Drawing.Point(179, 12);
             this.outputText.Name = "outputText";
-            this.outputText.Size = new System.Drawing.Size(609, 365);
+            this.outputText.Size = new System.Drawing.Size(609, 458);
             this.outputText.TabIndex = 1;
             this.outputText.Text = "";
             this.outputText.TextChanged += new System.EventHandler(this.outputChanged);
@@ -82,7 +82,6 @@ namespace ServCreator
             this.commandInput.Name = "commandInput";
             this.commandInput.Size = new System.Drawing.Size(540, 20);
             this.commandInput.TabIndex = 2;
-            this.commandInput.TextChanged += new System.EventHandler(this.commandInput_TextChanged);
             this.commandInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.submitCommand);
             // 
             // submit
@@ -133,7 +132,7 @@ namespace ServCreator
             this.servMgmtBox.Controls.Add(this.killBtn);
             this.servMgmtBox.Controls.Add(this.editProperties);
             this.servMgmtBox.ForeColor = System.Drawing.Color.White;
-            this.servMgmtBox.Location = new System.Drawing.Point(12, 179);
+            this.servMgmtBox.Location = new System.Drawing.Point(12, 272);
             this.servMgmtBox.Name = "servMgmtBox";
             this.servMgmtBox.Size = new System.Drawing.Size(157, 224);
             this.servMgmtBox.TabIndex = 6;
@@ -196,7 +195,7 @@ namespace ServCreator
             this.serverLabel.ForeColor = System.Drawing.Color.White;
             this.serverLabel.Location = new System.Drawing.Point(12, 12);
             this.serverLabel.Name = "serverLabel";
-            this.serverLabel.Size = new System.Drawing.Size(157, 94);
+            this.serverLabel.Size = new System.Drawing.Size(157, 257);
             this.serverLabel.TabIndex = 8;
             // 
             // panel1
@@ -206,7 +205,7 @@ namespace ServCreator
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(179, 415);
+            this.panel1.Size = new System.Drawing.Size(179, 508);
             this.panel1.TabIndex = 10;
             // 
             // panel2
@@ -220,7 +219,7 @@ namespace ServCreator
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(179, 403);
+            this.panel3.Location = new System.Drawing.Point(179, 496);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(621, 12);
             this.panel3.TabIndex = 12;
@@ -230,7 +229,7 @@ namespace ServCreator
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(788, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(12, 391);
+            this.panel4.Size = new System.Drawing.Size(12, 484);
             this.panel4.TabIndex = 13;
             // 
             // panel5
@@ -238,7 +237,7 @@ namespace ServCreator
             this.panel5.Controls.Add(this.commandInput);
             this.panel5.Controls.Add(this.submit);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(179, 383);
+            this.panel5.Location = new System.Drawing.Point(179, 476);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(609, 20);
             this.panel5.TabIndex = 14;
@@ -246,7 +245,7 @@ namespace ServCreator
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(179, 377);
+            this.panel6.Location = new System.Drawing.Point(179, 470);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(609, 6);
             this.panel6.TabIndex = 15;
@@ -256,7 +255,7 @@ namespace ServCreator
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(800, 415);
+            this.ClientSize = new System.Drawing.Size(800, 508);
             this.Controls.Add(this.outputText);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -264,7 +263,9 @@ namespace ServCreator
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(816, 547);
             this.Name = "ControlPanelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Panel - ServManager for Minecraft";

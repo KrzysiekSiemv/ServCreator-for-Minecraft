@@ -9,7 +9,6 @@ namespace ServCreator
 {
     public partial class CreateForm : Form
     {
-        static Properties.Settings conf = new Properties.Settings();
         public CreateForm()
         {
             InitializeComponent();

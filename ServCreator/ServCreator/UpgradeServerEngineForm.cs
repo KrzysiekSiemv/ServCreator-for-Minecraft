@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using Newtonsoft.Json;
@@ -18,6 +11,7 @@ namespace ServCreator
         string filePath;
         Server server;
         public ControlPanelForm controlPanel;
+
         public UpgradeServerEngineForm(string configFilePath)
         {
             InitializeComponent();
@@ -28,8 +22,9 @@ namespace ServCreator
         {
             GetItems();
             GettingCurrerntEngine();
+
             serverEngineCB.SelectedIndex = 0;
-            serverVersionCB.SelectedIndex = 1;
+            serverVersionCB.SelectedIndex = 0;
         }
 
         void GetItems()
@@ -48,11 +43,10 @@ namespace ServCreator
         {
             StreamReader reader = new StreamReader(filePath);
             server = JsonConvert.DeserializeObject<Server>(reader.ReadToEnd());
+            reader.Close();
 
             label1.Text = "Currently installed on " + server.Name; 
-            currentEngineLabel.Text = server.Engine + ", " + server.Version;
-
-            reader.Close();
+            currentEngineLabel.Text = server.Engine.ToUpper() + ", " + server.Version;
         }
 
         void GetOtherVersion()
@@ -76,7 +70,7 @@ namespace ServCreator
                 server.Path = path;
                 server.Engine = serverEngineCB.Text;
                 server.Version = serverVersionCB.Text;
-                StreamWriter configWriter = new StreamWriter(path + "\\servmanager.srv");
+                StreamWriter configWriter = new StreamWriter(filePath);
                 configWriter.Write(JsonConvert.SerializeObject(server));
                 configWriter.Close();
 
@@ -115,11 +109,7 @@ namespace ServCreator
             public string[] Engines { get; set; }
         }
 
-        private void UpgradeServerEngineForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            controlPanel.Enabled = true;
-            controlPanel.GetFreshConfig();
-            this.Close();
-        }
+        private void UpgradeServerEngineForm_FormClosing(object sender, FormClosingEventArgs e) { controlPanel.Visible = true; controlPanel.GetFreshConfig(); }
+        private void button1_Click(object sender, EventArgs e) { GetOtherVersion(); }
     }
 }

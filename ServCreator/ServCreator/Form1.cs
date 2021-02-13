@@ -15,7 +15,6 @@ namespace ServCreator
 {
     public partial class Form1 : Form
     {
-        static Properties.Settings conf = new Properties.Settings();
         public Form1() { InitializeComponent(); }
 
         private void createBtn_Click(object sender, EventArgs e)

@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
 [assembly: AssemblyTitle("ServCreator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Server Manager for Minecraft servers")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ServCreator")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCompany("Krzysztof 'KrzysiekSiemv' Smaga")]
+[assembly: AssemblyProduct("ServManager for Minecraft")]
+[assembly: AssemblyCopyright("Copyright © Krzysztof Smaga 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
