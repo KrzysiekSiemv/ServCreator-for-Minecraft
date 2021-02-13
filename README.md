@@ -1,5 +1,5 @@
-# ServCreator for Minecraft
-ServCreator is a server manager for Minecraft local servers, that are running on Windows. It has easy creator, manager and updater. If you have any idea or you've found a bug, write about it on Issues.
+# ServManager for Minecraft
+ServManager is a server manager for Minecraft local servers, that are running on Windows. It has easy creator, manager and updater. If you have any idea or you've found a bug, write about it on Issues.
 <br><br>
 Required: .NET Framework 4.7; Java SE Runtime Environment (any version).<br>
 
