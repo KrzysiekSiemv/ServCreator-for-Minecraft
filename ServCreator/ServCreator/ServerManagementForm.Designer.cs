@@ -38,6 +38,21 @@ namespace ServCreator
             this.label3 = new System.Windows.Forms.Label();
             this.reasonIpTxt = new System.Windows.Forms.RichTextBox();
             this.playerMgmtBox = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.giveItemBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.giveBtn = new System.Windows.Forms.Button();
+            this.giveAmountBox = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.addXpBtn = new System.Windows.Forms.Button();
+            this.setXpBtn = new System.Windows.Forms.Button();
+            this.xpBox = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.teleportBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.teleportBox = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.nicknameTb = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -47,7 +62,6 @@ namespace ServCreator
             this.gmBtn = new System.Windows.Forms.Button();
             this.gmBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.whiteListBox = new System.Windows.Forms.CheckBox();
             this.wlDelBtn = new System.Windows.Forms.Button();
             this.wlAddBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -56,55 +70,41 @@ namespace ServCreator
             this.banPlayerBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.reasonPlayerTxt = new System.Windows.Forms.RichTextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.teleportBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.teleportBtn = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.xpBox = new System.Windows.Forms.NumericUpDown();
-            this.setXpBtn = new System.Windows.Forms.Button();
-            this.addXpBtn = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.giveBtn = new System.Windows.Forms.Button();
-            this.giveAmountBox = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.giveItemBox = new System.Windows.Forms.TextBox();
+            this.whiteListBox = new System.Windows.Forms.CheckBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.timeBox = new System.Windows.Forms.NumericUpDown();
-            this.timeSetBtn = new System.Windows.Forms.Button();
-            this.timeAddBtn = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.midnightBtn = new System.Windows.Forms.Button();
-            this.dayBtn = new System.Windows.Forms.Button();
-            this.nightBtn = new System.Windows.Forms.Button();
-            this.noonBtn = new System.Windows.Forms.Button();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.weatherBtn = new System.Windows.Forms.Button();
-            this.weatherBox = new System.Windows.Forms.ComboBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.printListBtn = new System.Windows.Forms.Button();
             this.reloadBtn = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.weatherBtn = new System.Windows.Forms.Button();
+            this.weatherBox = new System.Windows.Forms.ComboBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.noonBtn = new System.Windows.Forms.Button();
+            this.nightBtn = new System.Windows.Forms.Button();
+            this.dayBtn = new System.Windows.Forms.Button();
+            this.midnightBtn = new System.Windows.Forms.Button();
+            this.timeAddBtn = new System.Windows.Forms.Button();
+            this.timeSetBtn = new System.Windows.Forms.Button();
+            this.timeBox = new System.Windows.Forms.NumericUpDown();
             this.ipBanBox.SuspendLayout();
             this.playerMgmtBox.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.giveAmountBox)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xpBox)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xpBox)).BeginInit();
-            this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.giveAmountBox)).BeginInit();
             this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeBox)).BeginInit();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ipBanBox
@@ -198,6 +198,176 @@ namespace ServCreator
             this.playerMgmtBox.TabIndex = 9;
             this.playerMgmtBox.TabStop = false;
             this.playerMgmtBox.Text = "Player Management";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.giveItemBox);
+            this.groupBox8.Controls.Add(this.label7);
+            this.groupBox8.Controls.Add(this.giveBtn);
+            this.groupBox8.Controls.Add(this.giveAmountBox);
+            this.groupBox8.Controls.Add(this.label6);
+            this.groupBox8.ForeColor = System.Drawing.Color.White;
+            this.groupBox8.Location = new System.Drawing.Point(320, 207);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(162, 124);
+            this.groupBox8.TabIndex = 13;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Give";
+            // 
+            // giveItemBox
+            // 
+            this.giveItemBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.giveItemBox.Location = new System.Drawing.Point(6, 31);
+            this.giveItemBox.Name = "giveItemBox";
+            this.giveItemBox.Size = new System.Drawing.Size(150, 20);
+            this.giveItemBox.TabIndex = 8;
+            this.giveItemBox.Text = "minecraft:diamond";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Item:";
+            // 
+            // giveBtn
+            // 
+            this.giveBtn.ForeColor = System.Drawing.Color.Black;
+            this.giveBtn.Location = new System.Drawing.Point(110, 96);
+            this.giveBtn.Name = "giveBtn";
+            this.giveBtn.Size = new System.Drawing.Size(46, 23);
+            this.giveBtn.TabIndex = 6;
+            this.giveBtn.Text = "Give";
+            this.giveBtn.UseVisualStyleBackColor = true;
+            this.giveBtn.Click += new System.EventHandler(this.giveBtn_Click);
+            // 
+            // giveAmountBox
+            // 
+            this.giveAmountBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.giveAmountBox.Location = new System.Drawing.Point(6, 70);
+            this.giveAmountBox.Maximum = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            this.giveAmountBox.Name = "giveAmountBox";
+            this.giveAmountBox.Size = new System.Drawing.Size(150, 20);
+            this.giveAmountBox.TabIndex = 3;
+            this.giveAmountBox.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Amount:";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.addXpBtn);
+            this.groupBox7.Controls.Add(this.setXpBtn);
+            this.groupBox7.Controls.Add(this.xpBox);
+            this.groupBox7.Controls.Add(this.label5);
+            this.groupBox7.ForeColor = System.Drawing.Color.White;
+            this.groupBox7.Location = new System.Drawing.Point(320, 114);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(162, 87);
+            this.groupBox7.TabIndex = 12;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Experience";
+            // 
+            // addXpBtn
+            // 
+            this.addXpBtn.ForeColor = System.Drawing.Color.Black;
+            this.addXpBtn.Location = new System.Drawing.Point(110, 58);
+            this.addXpBtn.Name = "addXpBtn";
+            this.addXpBtn.Size = new System.Drawing.Size(46, 23);
+            this.addXpBtn.TabIndex = 5;
+            this.addXpBtn.Text = "Add";
+            this.addXpBtn.UseVisualStyleBackColor = true;
+            this.addXpBtn.Click += new System.EventHandler(this.addXpBtn_Click);
+            // 
+            // setXpBtn
+            // 
+            this.setXpBtn.ForeColor = System.Drawing.Color.Black;
+            this.setXpBtn.Location = new System.Drawing.Point(58, 58);
+            this.setXpBtn.Name = "setXpBtn";
+            this.setXpBtn.Size = new System.Drawing.Size(46, 23);
+            this.setXpBtn.TabIndex = 4;
+            this.setXpBtn.Text = "Set";
+            this.setXpBtn.UseVisualStyleBackColor = true;
+            this.setXpBtn.Click += new System.EventHandler(this.setXpBtn_Click);
+            // 
+            // xpBox
+            // 
+            this.xpBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.xpBox.Location = new System.Drawing.Point(6, 32);
+            this.xpBox.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.xpBox.Name = "xpBox";
+            this.xpBox.Size = new System.Drawing.Size(150, 20);
+            this.xpBox.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Amount:";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.teleportBtn);
+            this.groupBox6.Controls.Add(this.label1);
+            this.groupBox6.Controls.Add(this.teleportBox);
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(320, 19);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(162, 89);
+            this.groupBox6.TabIndex = 11;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Teleport";
+            // 
+            // teleportBtn
+            // 
+            this.teleportBtn.ForeColor = System.Drawing.Color.Black;
+            this.teleportBtn.Location = new System.Drawing.Point(81, 58);
+            this.teleportBtn.Name = "teleportBtn";
+            this.teleportBtn.Size = new System.Drawing.Size(75, 23);
+            this.teleportBtn.TabIndex = 2;
+            this.teleportBtn.Text = "Teleport";
+            this.teleportBtn.UseVisualStyleBackColor = true;
+            this.teleportBtn.Click += new System.EventHandler(this.teleportBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Teleport to:";
+            // 
+            // teleportBox
+            // 
+            this.teleportBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.teleportBox.Location = new System.Drawing.Point(6, 32);
+            this.teleportBox.Name = "teleportBox";
+            this.teleportBox.Size = new System.Drawing.Size(150, 20);
+            this.teleportBox.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -301,17 +471,6 @@ namespace ServCreator
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "White-list";
             // 
-            // whiteListBox
-            // 
-            this.whiteListBox.AutoSize = true;
-            this.whiteListBox.Location = new System.Drawing.Point(20, 48);
-            this.whiteListBox.Name = "whiteListBox";
-            this.whiteListBox.Size = new System.Drawing.Size(128, 17);
-            this.whiteListBox.TabIndex = 4;
-            this.whiteListBox.Text = "Enable White-list";
-            this.whiteListBox.UseVisualStyleBackColor = true;
-            this.whiteListBox.CheckedChanged += new System.EventHandler(this.whiteListBox_CheckedChanged);
-            // 
             // wlDelBtn
             // 
             this.wlDelBtn.ForeColor = System.Drawing.Color.Black;
@@ -400,175 +559,16 @@ namespace ServCreator
             this.reasonPlayerTxt.TabIndex = 0;
             this.reasonPlayerTxt.Text = "";
             // 
-            // groupBox6
+            // whiteListBox
             // 
-            this.groupBox6.Controls.Add(this.teleportBtn);
-            this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Controls.Add(this.teleportBox);
-            this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(320, 19);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(162, 89);
-            this.groupBox6.TabIndex = 11;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Teleport";
-            // 
-            // teleportBox
-            // 
-            this.teleportBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.teleportBox.Location = new System.Drawing.Point(6, 32);
-            this.teleportBox.Name = "teleportBox";
-            this.teleportBox.Size = new System.Drawing.Size(150, 20);
-            this.teleportBox.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Teleport to:";
-            // 
-            // teleportBtn
-            // 
-            this.teleportBtn.ForeColor = System.Drawing.Color.Black;
-            this.teleportBtn.Location = new System.Drawing.Point(81, 58);
-            this.teleportBtn.Name = "teleportBtn";
-            this.teleportBtn.Size = new System.Drawing.Size(75, 23);
-            this.teleportBtn.TabIndex = 2;
-            this.teleportBtn.Text = "Teleport";
-            this.teleportBtn.UseVisualStyleBackColor = true;
-            this.teleportBtn.Click += new System.EventHandler(this.teleportBtn_Click);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.addXpBtn);
-            this.groupBox7.Controls.Add(this.setXpBtn);
-            this.groupBox7.Controls.Add(this.xpBox);
-            this.groupBox7.Controls.Add(this.label5);
-            this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(320, 114);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(162, 87);
-            this.groupBox7.TabIndex = 12;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Experience";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Amount:";
-            // 
-            // xpBox
-            // 
-            this.xpBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.xpBox.Location = new System.Drawing.Point(6, 32);
-            this.xpBox.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.xpBox.Name = "xpBox";
-            this.xpBox.Size = new System.Drawing.Size(150, 20);
-            this.xpBox.TabIndex = 3;
-            // 
-            // setXpBtn
-            // 
-            this.setXpBtn.ForeColor = System.Drawing.Color.Black;
-            this.setXpBtn.Location = new System.Drawing.Point(58, 58);
-            this.setXpBtn.Name = "setXpBtn";
-            this.setXpBtn.Size = new System.Drawing.Size(46, 23);
-            this.setXpBtn.TabIndex = 4;
-            this.setXpBtn.Text = "Set";
-            this.setXpBtn.UseVisualStyleBackColor = true;
-            this.setXpBtn.Click += new System.EventHandler(this.setXpBtn_Click);
-            // 
-            // addXpBtn
-            // 
-            this.addXpBtn.ForeColor = System.Drawing.Color.Black;
-            this.addXpBtn.Location = new System.Drawing.Point(110, 58);
-            this.addXpBtn.Name = "addXpBtn";
-            this.addXpBtn.Size = new System.Drawing.Size(46, 23);
-            this.addXpBtn.TabIndex = 5;
-            this.addXpBtn.Text = "Add";
-            this.addXpBtn.UseVisualStyleBackColor = true;
-            this.addXpBtn.Click += new System.EventHandler(this.addXpBtn_Click);
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.giveItemBox);
-            this.groupBox8.Controls.Add(this.label7);
-            this.groupBox8.Controls.Add(this.giveBtn);
-            this.groupBox8.Controls.Add(this.giveAmountBox);
-            this.groupBox8.Controls.Add(this.label6);
-            this.groupBox8.ForeColor = System.Drawing.Color.White;
-            this.groupBox8.Location = new System.Drawing.Point(320, 207);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(162, 124);
-            this.groupBox8.TabIndex = 13;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Give";
-            // 
-            // giveBtn
-            // 
-            this.giveBtn.ForeColor = System.Drawing.Color.Black;
-            this.giveBtn.Location = new System.Drawing.Point(110, 96);
-            this.giveBtn.Name = "giveBtn";
-            this.giveBtn.Size = new System.Drawing.Size(46, 23);
-            this.giveBtn.TabIndex = 6;
-            this.giveBtn.Text = "Give";
-            this.giveBtn.UseVisualStyleBackColor = true;
-            this.giveBtn.Click += new System.EventHandler(this.giveBtn_Click);
-            // 
-            // giveAmountBox
-            // 
-            this.giveAmountBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.giveAmountBox.Location = new System.Drawing.Point(6, 70);
-            this.giveAmountBox.Maximum = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            this.giveAmountBox.Name = "giveAmountBox";
-            this.giveAmountBox.Size = new System.Drawing.Size(150, 20);
-            this.giveAmountBox.TabIndex = 3;
-            this.giveAmountBox.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 54);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Amount:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Item:";
-            // 
-            // giveItemBox
-            // 
-            this.giveItemBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.giveItemBox.Location = new System.Drawing.Point(6, 31);
-            this.giveItemBox.Name = "giveItemBox";
-            this.giveItemBox.Size = new System.Drawing.Size(150, 20);
-            this.giveItemBox.TabIndex = 8;
-            this.giveItemBox.Text = "minecraft:diamond";
+            this.whiteListBox.AutoSize = true;
+            this.whiteListBox.Location = new System.Drawing.Point(20, 48);
+            this.whiteListBox.Name = "whiteListBox";
+            this.whiteListBox.Size = new System.Drawing.Size(128, 17);
+            this.whiteListBox.TabIndex = 4;
+            this.whiteListBox.Text = "Enable White-list";
+            this.whiteListBox.UseVisualStyleBackColor = true;
+            this.whiteListBox.CheckedChanged += new System.EventHandler(this.whiteListBox_CheckedChanged);
             // 
             // groupBox9
             // 
@@ -583,110 +583,40 @@ namespace ServCreator
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Server Management";
             // 
-            // groupBox10
+            // groupBox13
             // 
-            this.groupBox10.Controls.Add(this.groupBox11);
-            this.groupBox10.Controls.Add(this.timeAddBtn);
-            this.groupBox10.Controls.Add(this.timeSetBtn);
-            this.groupBox10.Controls.Add(this.timeBox);
-            this.groupBox10.ForeColor = System.Drawing.Color.White;
-            this.groupBox10.Location = new System.Drawing.Point(6, 19);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(168, 157);
-            this.groupBox10.TabIndex = 12;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Time";
+            this.groupBox13.Controls.Add(this.whiteListBox);
+            this.groupBox13.Controls.Add(this.printListBtn);
+            this.groupBox13.Controls.Add(this.reloadBtn);
+            this.groupBox13.ForeColor = System.Drawing.Color.White;
+            this.groupBox13.Location = new System.Drawing.Point(6, 264);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(168, 67);
+            this.groupBox13.TabIndex = 11;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "White-list";
             // 
-            // timeBox
+            // printListBtn
             // 
-            this.timeBox.Location = new System.Drawing.Point(6, 19);
-            this.timeBox.Maximum = new decimal(new int[] {
-            24000,
-            0,
-            0,
-            0});
-            this.timeBox.Name = "timeBox";
-            this.timeBox.Size = new System.Drawing.Size(156, 20);
-            this.timeBox.TabIndex = 3;
+            this.printListBtn.ForeColor = System.Drawing.Color.Black;
+            this.printListBtn.Location = new System.Drawing.Point(66, 19);
+            this.printListBtn.Name = "printListBtn";
+            this.printListBtn.Size = new System.Drawing.Size(96, 23);
+            this.printListBtn.TabIndex = 3;
+            this.printListBtn.Text = "Print List";
+            this.printListBtn.UseVisualStyleBackColor = true;
+            this.printListBtn.Click += new System.EventHandler(this.printListBtn_Click);
             // 
-            // timeSetBtn
+            // reloadBtn
             // 
-            this.timeSetBtn.ForeColor = System.Drawing.Color.Black;
-            this.timeSetBtn.Location = new System.Drawing.Point(64, 45);
-            this.timeSetBtn.Name = "timeSetBtn";
-            this.timeSetBtn.Size = new System.Drawing.Size(46, 23);
-            this.timeSetBtn.TabIndex = 7;
-            this.timeSetBtn.Text = "Set";
-            this.timeSetBtn.UseVisualStyleBackColor = true;
-            this.timeSetBtn.Click += new System.EventHandler(this.timeSetBtn_Click);
-            // 
-            // timeAddBtn
-            // 
-            this.timeAddBtn.ForeColor = System.Drawing.Color.Black;
-            this.timeAddBtn.Location = new System.Drawing.Point(116, 45);
-            this.timeAddBtn.Name = "timeAddBtn";
-            this.timeAddBtn.Size = new System.Drawing.Size(46, 23);
-            this.timeAddBtn.TabIndex = 8;
-            this.timeAddBtn.Text = "Add";
-            this.timeAddBtn.UseVisualStyleBackColor = true;
-            this.timeAddBtn.Click += new System.EventHandler(this.timeAddBtn_Click);
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.noonBtn);
-            this.groupBox11.Controls.Add(this.nightBtn);
-            this.groupBox11.Controls.Add(this.dayBtn);
-            this.groupBox11.Controls.Add(this.midnightBtn);
-            this.groupBox11.ForeColor = System.Drawing.Color.White;
-            this.groupBox11.Location = new System.Drawing.Point(6, 74);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(156, 76);
-            this.groupBox11.TabIndex = 13;
-            this.groupBox11.TabStop = false;
-            // 
-            // midnightBtn
-            // 
-            this.midnightBtn.ForeColor = System.Drawing.Color.Black;
-            this.midnightBtn.Location = new System.Drawing.Point(80, 43);
-            this.midnightBtn.Name = "midnightBtn";
-            this.midnightBtn.Size = new System.Drawing.Size(68, 23);
-            this.midnightBtn.TabIndex = 0;
-            this.midnightBtn.Text = "Midnight";
-            this.midnightBtn.UseVisualStyleBackColor = true;
-            this.midnightBtn.Click += new System.EventHandler(this.midnightBtn_Click);
-            // 
-            // dayBtn
-            // 
-            this.dayBtn.ForeColor = System.Drawing.Color.Black;
-            this.dayBtn.Location = new System.Drawing.Point(6, 14);
-            this.dayBtn.Name = "dayBtn";
-            this.dayBtn.Size = new System.Drawing.Size(68, 23);
-            this.dayBtn.TabIndex = 1;
-            this.dayBtn.Text = "Day";
-            this.dayBtn.UseVisualStyleBackColor = true;
-            this.dayBtn.Click += new System.EventHandler(this.dayBtn_Click);
-            // 
-            // nightBtn
-            // 
-            this.nightBtn.ForeColor = System.Drawing.Color.Black;
-            this.nightBtn.Location = new System.Drawing.Point(80, 14);
-            this.nightBtn.Name = "nightBtn";
-            this.nightBtn.Size = new System.Drawing.Size(68, 23);
-            this.nightBtn.TabIndex = 2;
-            this.nightBtn.Text = "Night";
-            this.nightBtn.UseVisualStyleBackColor = true;
-            this.nightBtn.Click += new System.EventHandler(this.nightBtn_Click);
-            // 
-            // noonBtn
-            // 
-            this.noonBtn.ForeColor = System.Drawing.Color.Black;
-            this.noonBtn.Location = new System.Drawing.Point(6, 43);
-            this.noonBtn.Name = "noonBtn";
-            this.noonBtn.Size = new System.Drawing.Size(68, 23);
-            this.noonBtn.TabIndex = 3;
-            this.noonBtn.Text = "Noon";
-            this.noonBtn.UseVisualStyleBackColor = true;
-            this.noonBtn.Click += new System.EventHandler(this.noonBtn_Click);
+            this.reloadBtn.ForeColor = System.Drawing.Color.Black;
+            this.reloadBtn.Location = new System.Drawing.Point(6, 19);
+            this.reloadBtn.Name = "reloadBtn";
+            this.reloadBtn.Size = new System.Drawing.Size(54, 23);
+            this.reloadBtn.TabIndex = 2;
+            this.reloadBtn.Text = "Reload";
+            this.reloadBtn.UseVisualStyleBackColor = true;
+            this.reloadBtn.Click += new System.EventHandler(this.reloadBtn_Click);
             // 
             // groupBox12
             // 
@@ -724,40 +654,110 @@ namespace ServCreator
             this.weatherBox.Size = new System.Drawing.Size(156, 21);
             this.weatherBox.TabIndex = 0;
             // 
-            // groupBox13
+            // groupBox10
             // 
-            this.groupBox13.Controls.Add(this.whiteListBox);
-            this.groupBox13.Controls.Add(this.printListBtn);
-            this.groupBox13.Controls.Add(this.reloadBtn);
-            this.groupBox13.ForeColor = System.Drawing.Color.White;
-            this.groupBox13.Location = new System.Drawing.Point(6, 264);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(168, 67);
-            this.groupBox13.TabIndex = 11;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "White-list";
+            this.groupBox10.Controls.Add(this.groupBox11);
+            this.groupBox10.Controls.Add(this.timeAddBtn);
+            this.groupBox10.Controls.Add(this.timeSetBtn);
+            this.groupBox10.Controls.Add(this.timeBox);
+            this.groupBox10.ForeColor = System.Drawing.Color.White;
+            this.groupBox10.Location = new System.Drawing.Point(6, 19);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(168, 157);
+            this.groupBox10.TabIndex = 12;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Time";
             // 
-            // printListBtn
+            // groupBox11
             // 
-            this.printListBtn.ForeColor = System.Drawing.Color.Black;
-            this.printListBtn.Location = new System.Drawing.Point(66, 19);
-            this.printListBtn.Name = "printListBtn";
-            this.printListBtn.Size = new System.Drawing.Size(96, 23);
-            this.printListBtn.TabIndex = 3;
-            this.printListBtn.Text = "Print List";
-            this.printListBtn.UseVisualStyleBackColor = true;
-            this.printListBtn.Click += new System.EventHandler(this.printListBtn_Click);
+            this.groupBox11.Controls.Add(this.noonBtn);
+            this.groupBox11.Controls.Add(this.nightBtn);
+            this.groupBox11.Controls.Add(this.dayBtn);
+            this.groupBox11.Controls.Add(this.midnightBtn);
+            this.groupBox11.ForeColor = System.Drawing.Color.White;
+            this.groupBox11.Location = new System.Drawing.Point(6, 74);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(156, 76);
+            this.groupBox11.TabIndex = 13;
+            this.groupBox11.TabStop = false;
             // 
-            // reloadBtn
+            // noonBtn
             // 
-            this.reloadBtn.ForeColor = System.Drawing.Color.Black;
-            this.reloadBtn.Location = new System.Drawing.Point(6, 19);
-            this.reloadBtn.Name = "reloadBtn";
-            this.reloadBtn.Size = new System.Drawing.Size(54, 23);
-            this.reloadBtn.TabIndex = 2;
-            this.reloadBtn.Text = "Reload";
-            this.reloadBtn.UseVisualStyleBackColor = true;
-            this.reloadBtn.Click += new System.EventHandler(this.reloadBtn_Click);
+            this.noonBtn.ForeColor = System.Drawing.Color.Black;
+            this.noonBtn.Location = new System.Drawing.Point(6, 43);
+            this.noonBtn.Name = "noonBtn";
+            this.noonBtn.Size = new System.Drawing.Size(68, 23);
+            this.noonBtn.TabIndex = 3;
+            this.noonBtn.Text = "Noon";
+            this.noonBtn.UseVisualStyleBackColor = true;
+            this.noonBtn.Click += new System.EventHandler(this.noonBtn_Click);
+            // 
+            // nightBtn
+            // 
+            this.nightBtn.ForeColor = System.Drawing.Color.Black;
+            this.nightBtn.Location = new System.Drawing.Point(80, 14);
+            this.nightBtn.Name = "nightBtn";
+            this.nightBtn.Size = new System.Drawing.Size(68, 23);
+            this.nightBtn.TabIndex = 2;
+            this.nightBtn.Text = "Night";
+            this.nightBtn.UseVisualStyleBackColor = true;
+            this.nightBtn.Click += new System.EventHandler(this.nightBtn_Click);
+            // 
+            // dayBtn
+            // 
+            this.dayBtn.ForeColor = System.Drawing.Color.Black;
+            this.dayBtn.Location = new System.Drawing.Point(6, 14);
+            this.dayBtn.Name = "dayBtn";
+            this.dayBtn.Size = new System.Drawing.Size(68, 23);
+            this.dayBtn.TabIndex = 1;
+            this.dayBtn.Text = "Day";
+            this.dayBtn.UseVisualStyleBackColor = true;
+            this.dayBtn.Click += new System.EventHandler(this.dayBtn_Click);
+            // 
+            // midnightBtn
+            // 
+            this.midnightBtn.ForeColor = System.Drawing.Color.Black;
+            this.midnightBtn.Location = new System.Drawing.Point(80, 43);
+            this.midnightBtn.Name = "midnightBtn";
+            this.midnightBtn.Size = new System.Drawing.Size(68, 23);
+            this.midnightBtn.TabIndex = 0;
+            this.midnightBtn.Text = "Midnight";
+            this.midnightBtn.UseVisualStyleBackColor = true;
+            this.midnightBtn.Click += new System.EventHandler(this.midnightBtn_Click);
+            // 
+            // timeAddBtn
+            // 
+            this.timeAddBtn.ForeColor = System.Drawing.Color.Black;
+            this.timeAddBtn.Location = new System.Drawing.Point(116, 45);
+            this.timeAddBtn.Name = "timeAddBtn";
+            this.timeAddBtn.Size = new System.Drawing.Size(46, 23);
+            this.timeAddBtn.TabIndex = 8;
+            this.timeAddBtn.Text = "Add";
+            this.timeAddBtn.UseVisualStyleBackColor = true;
+            this.timeAddBtn.Click += new System.EventHandler(this.timeAddBtn_Click);
+            // 
+            // timeSetBtn
+            // 
+            this.timeSetBtn.ForeColor = System.Drawing.Color.Black;
+            this.timeSetBtn.Location = new System.Drawing.Point(64, 45);
+            this.timeSetBtn.Name = "timeSetBtn";
+            this.timeSetBtn.Size = new System.Drawing.Size(46, 23);
+            this.timeSetBtn.TabIndex = 7;
+            this.timeSetBtn.Text = "Set";
+            this.timeSetBtn.UseVisualStyleBackColor = true;
+            this.timeSetBtn.Click += new System.EventHandler(this.timeSetBtn_Click);
+            // 
+            // timeBox
+            // 
+            this.timeBox.Location = new System.Drawing.Point(6, 19);
+            this.timeBox.Maximum = new decimal(new int[] {
+            24000,
+            0,
+            0,
+            0});
+            this.timeBox.Name = "timeBox";
+            this.timeBox.Size = new System.Drawing.Size(156, 20);
+            this.timeBox.TabIndex = 3;
             // 
             // ServerManagementForm
             // 
@@ -771,7 +771,9 @@ namespace ServCreator
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(713, 400);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(713, 400);
             this.Name = "ServerManagementForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage with Server - ServManager for Minecraft";
@@ -779,6 +781,14 @@ namespace ServCreator
             this.ipBanBox.ResumeLayout(false);
             this.ipBanBox.PerformLayout();
             this.playerMgmtBox.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.giveAmountBox)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xpBox)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -786,21 +796,13 @@ namespace ServCreator
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xpBox)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.giveAmountBox)).EndInit();
             this.groupBox9.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.timeBox)).EndInit();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.timeBox)).EndInit();
             this.ResumeLayout(false);
 
         }

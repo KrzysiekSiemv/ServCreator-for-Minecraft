@@ -112,7 +112,7 @@ namespace ServCreator
                         downloader.DownloadFileCompleted += (s, v) =>
                         {
                             progressBar1.Visible = false;
-                            MessageBox.Show("Server " + serverNameTB.Text + " has been created in: " + serverPathTB.Text + ". After pressing the OK button you'll be taken to the control panel.");
+                            MessageBox.Show("Server " + serverNameTB.Text + " has been created in: " + serverPathTB.Text + ". After pressing the OK button you'll be taken to the control panel.", "Server Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             ControlPanelForm controlPanel = new ControlPanelForm(serverPathTB.Text + "\\servmanager.srv");
                             controlPanel.Show();

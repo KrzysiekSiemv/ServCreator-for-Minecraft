@@ -167,11 +167,11 @@ namespace ServCreator
             // selectBtn
             // 
             this.selectBtn.ForeColor = System.Drawing.Color.Black;
-            this.selectBtn.Location = new System.Drawing.Point(268, 76);
+            this.selectBtn.Location = new System.Drawing.Point(255, 76);
             this.selectBtn.Name = "selectBtn";
-            this.selectBtn.Size = new System.Drawing.Size(100, 25);
+            this.selectBtn.Size = new System.Drawing.Size(113, 25);
             this.selectBtn.TabIndex = 6;
-            this.selectBtn.Text = "Select a path...";
+            this.selectBtn.Text = "Select a path";
             this.selectBtn.UseVisualStyleBackColor = true;
             this.selectBtn.Click += new System.EventHandler(this.selectPath);
             // 
@@ -291,7 +291,7 @@ namespace ServCreator
             // 
             this.serverPathTB.Location = new System.Drawing.Point(6, 79);
             this.serverPathTB.Name = "serverPathTB";
-            this.serverPathTB.Size = new System.Drawing.Size(256, 23);
+            this.serverPathTB.Size = new System.Drawing.Size(243, 23);
             this.serverPathTB.TabIndex = 17;
             // 
             // progressBar1
@@ -359,6 +359,8 @@ namespace ServCreator
             // onlineMode
             // 
             this.onlineMode.AutoSize = true;
+            this.onlineMode.Checked = true;
+            this.onlineMode.CheckState = System.Windows.Forms.CheckState.Checked;
             this.onlineMode.Location = new System.Drawing.Point(94, 141);
             this.onlineMode.Name = "onlineMode";
             this.onlineMode.Size = new System.Drawing.Size(103, 19);

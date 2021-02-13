@@ -58,25 +58,25 @@ namespace ServCreator
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 105);
+            this.label1.Location = new System.Drawing.Point(12, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Server Name:";
+            this.label1.Text = "Server Name*:";
             // 
             // serverNameBox
             // 
-            this.serverNameBox.Location = new System.Drawing.Point(15, 125);
+            this.serverNameBox.Location = new System.Drawing.Point(15, 110);
             this.serverNameBox.Name = "serverNameBox";
-            this.serverNameBox.Size = new System.Drawing.Size(359, 25);
+            this.serverNameBox.Size = new System.Drawing.Size(359, 23);
             this.serverNameBox.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(12, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(112, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Server Engine*:";
             // 
@@ -84,17 +84,17 @@ namespace ServCreator
             // 
             this.serverEngineCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.serverEngineCB.FormattingEnabled = true;
-            this.serverEngineCB.Location = new System.Drawing.Point(15, 77);
+            this.serverEngineCB.Location = new System.Drawing.Point(15, 68);
             this.serverEngineCB.Name = "serverEngineCB";
-            this.serverEngineCB.Size = new System.Drawing.Size(142, 25);
+            this.serverEngineCB.Size = new System.Drawing.Size(142, 23);
             this.serverEngineCB.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 57);
+            this.label3.Location = new System.Drawing.Point(160, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.Size = new System.Drawing.Size(70, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Version*:";
             // 
@@ -104,19 +104,19 @@ namespace ServCreator
             this.serverVersionCB.FormattingEnabled = true;
             this.serverVersionCB.Items.AddRange(new object[] {
             ""});
-            this.serverVersionCB.Location = new System.Drawing.Point(163, 77);
+            this.serverVersionCB.Location = new System.Drawing.Point(163, 68);
             this.serverVersionCB.Name = "serverVersionCB";
-            this.serverVersionCB.Size = new System.Drawing.Size(211, 25);
+            this.serverVersionCB.Size = new System.Drawing.Size(211, 23);
             this.serverVersionCB.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 157);
+            this.label5.Location = new System.Drawing.Point(15, 139);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(347, 34);
+            this.label5.Size = new System.Drawing.Size(385, 30);
             this.label5.TabIndex = 11;
-            this.label5.Text = "ServManager requires \"start.bat\" file with arguments, that \r\nyou\'re running serve" +
+            this.label5.Text = "ServManager requires \"start.bat\" file with arguments, \r\nthat you\'re running serve" +
     "r your local server.";
             // 
             // groupBox1
@@ -128,22 +128,22 @@ namespace ServCreator
             this.groupBox1.Controls.Add(this.argumentsTB);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 194);
+            this.groupBox1.Location = new System.Drawing.Point(12, 171);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 124);
+            this.groupBox1.Size = new System.Drawing.Size(370, 109);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // maxRAM
             // 
-            this.maxRAM.Location = new System.Drawing.Point(191, 41);
+            this.maxRAM.Location = new System.Drawing.Point(191, 36);
             this.maxRAM.Maximum = new decimal(new int[] {
             102400,
             0,
             0,
             0});
             this.maxRAM.Name = "maxRAM";
-            this.maxRAM.Size = new System.Drawing.Size(171, 25);
+            this.maxRAM.Size = new System.Drawing.Size(171, 23);
             this.maxRAM.TabIndex = 20;
             this.maxRAM.Value = new decimal(new int[] {
             2048,
@@ -154,22 +154,22 @@ namespace ServCreator
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(188, 21);
+            this.label7.Location = new System.Drawing.Point(188, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 17);
+            this.label7.Size = new System.Drawing.Size(154, 15);
             this.label7.TabIndex = 19;
             this.label7.Text = "Maximum RAM (in MB)*:";
             // 
             // minRAM
             // 
-            this.minRAM.Location = new System.Drawing.Point(6, 41);
+            this.minRAM.Location = new System.Drawing.Point(6, 36);
             this.minRAM.Maximum = new decimal(new int[] {
             102400,
             0,
             0,
             0});
             this.minRAM.Name = "minRAM";
-            this.minRAM.Size = new System.Drawing.Size(177, 25);
+            this.minRAM.Size = new System.Drawing.Size(177, 23);
             this.minRAM.TabIndex = 18;
             this.minRAM.Value = new decimal(new int[] {
             2048,
@@ -180,25 +180,25 @@ namespace ServCreator
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 21);
+            this.label6.Location = new System.Drawing.Point(6, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 17);
+            this.label6.Size = new System.Drawing.Size(154, 15);
             this.label6.TabIndex = 17;
             this.label6.Text = "Minimum RAM (in MB)*:";
             // 
             // argumentsTB
             // 
-            this.argumentsTB.Location = new System.Drawing.Point(6, 89);
+            this.argumentsTB.Location = new System.Drawing.Point(6, 79);
             this.argumentsTB.Name = "argumentsTB";
-            this.argumentsTB.Size = new System.Drawing.Size(356, 25);
+            this.argumentsTB.Size = new System.Drawing.Size(356, 23);
             this.argumentsTB.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 69);
+            this.label8.Location = new System.Drawing.Point(6, 61);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 17);
+            this.label8.Size = new System.Drawing.Size(154, 15);
             this.label8.TabIndex = 16;
             this.label8.Text = "Additional arguments:";
             // 
@@ -207,7 +207,7 @@ namespace ServCreator
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(9, 0);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(127, 21);
+            this.checkBox1.Size = new System.Drawing.Size(152, 19);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Create \"start.bat\"";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -215,9 +215,9 @@ namespace ServCreator
             // addBtn
             // 
             this.addBtn.ForeColor = System.Drawing.Color.Black;
-            this.addBtn.Location = new System.Drawing.Point(307, 324);
+            this.addBtn.Location = new System.Drawing.Point(307, 286);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 25);
+            this.addBtn.Size = new System.Drawing.Size(75, 22);
             this.addBtn.TabIndex = 13;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -226,9 +226,9 @@ namespace ServCreator
             // pathSelectBtn
             // 
             this.pathSelectBtn.ForeColor = System.Drawing.Color.Black;
-            this.pathSelectBtn.Location = new System.Drawing.Point(299, 29);
+            this.pathSelectBtn.Location = new System.Drawing.Point(299, 26);
             this.pathSelectBtn.Name = "pathSelectBtn";
-            this.pathSelectBtn.Size = new System.Drawing.Size(75, 25);
+            this.pathSelectBtn.Size = new System.Drawing.Size(75, 22);
             this.pathSelectBtn.TabIndex = 16;
             this.pathSelectBtn.Text = "Select";
             this.pathSelectBtn.UseVisualStyleBackColor = true;
@@ -236,17 +236,17 @@ namespace ServCreator
             // 
             // serverPathBox
             // 
-            this.serverPathBox.Location = new System.Drawing.Point(15, 29);
+            this.serverPathBox.Location = new System.Drawing.Point(15, 26);
             this.serverPathBox.Name = "serverPathBox";
-            this.serverPathBox.Size = new System.Drawing.Size(278, 25);
+            this.serverPathBox.Size = new System.Drawing.Size(278, 23);
             this.serverPathBox.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 9);
+            this.label4.Location = new System.Drawing.Point(12, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.Size = new System.Drawing.Size(49, 15);
             this.label4.TabIndex = 14;
             this.label4.Text = "Path*:";
             // 
@@ -257,10 +257,10 @@ namespace ServCreator
             // 
             // AddServerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(394, 360);
+            this.ClientSize = new System.Drawing.Size(394, 318);
             this.Controls.Add(this.pathSelectBtn);
             this.Controls.Add(this.serverPathBox);
             this.Controls.Add(this.label4);
@@ -273,10 +273,13 @@ namespace ServCreator
             this.Controls.Add(this.serverVersionCB);
             this.Controls.Add(this.serverNameBox);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(410, 357);
+            this.MinimumSize = new System.Drawing.Size(410, 357);
             this.Name = "AddServerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Server - ServManager for Minecraft";

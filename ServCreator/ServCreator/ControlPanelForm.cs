@@ -141,7 +141,7 @@ namespace ServCreator
             thread.Start();
         }
 
-        private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e) { Application.Exit(); }
+        private void ControlPanelForm_FormClosing(object sender, FormClosingEventArgs e) { Form1 form1 = new Form1(); form1.Visible = true; }
         private void submit_Click(object sender, EventArgs e) { process.StandardInput.WriteLine(commandInput.Text); commandInput.Text = ""; commandInput.Focus(); }
         private void easyManagement(object sender, EventArgs e)
         {
@@ -166,6 +166,7 @@ namespace ServCreator
             killBtn.Enabled = value;
             startBtn.Enabled = !value;
             easyManagementBtn.Enabled = value;
+            changeServerEngineBtn.Enabled = !value;
         }
 
         private void stopBtn_Click(object sender, EventArgs e) 

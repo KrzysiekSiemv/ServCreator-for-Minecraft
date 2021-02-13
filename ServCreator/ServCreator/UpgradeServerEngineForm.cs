@@ -45,7 +45,7 @@ namespace ServCreator
             server = JsonConvert.DeserializeObject<Server>(reader.ReadToEnd());
             reader.Close();
 
-            label1.Text = "Currently installed on " + server.Name; 
+            label1.Text = "Currently installed: "; 
             currentEngineLabel.Text = server.Engine.ToUpper() + ", " + server.Version;
         }
 
@@ -77,7 +77,7 @@ namespace ServCreator
                 downloader.DownloadFileCompleted += (s, v) =>
                 {
                     progressBar1.Visible = false;
-                    MessageBox.Show("Server engine on " + server.Name + " has been changed to: " + serverEngineCB.Text + ", " + serverVersionCB.Text + ". After pressing the OK button you'll be taken back to the control panel.");
+                    MessageBox.Show("Server engine on " + server.Name + " has been changed to: " + serverEngineCB.Text + ", " + serverVersionCB.Text + ". After pressing the OK button you'll be taken back to the control panel.", "Server Engine changed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.Close();
                 };

@@ -38,7 +38,7 @@ namespace ServCreator
             this.killBtn = new System.Windows.Forms.Button();
             this.servMgmtBox = new System.Windows.Forms.GroupBox();
             this.pluginsBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.changeServerEngineBtn = new System.Windows.Forms.Button();
             this.easyManagementBtn = new System.Windows.Forms.Button();
             this.stopBtn = new System.Windows.Forms.Button();
             this.serverLabel = new System.Windows.Forms.Label();
@@ -125,7 +125,7 @@ namespace ServCreator
             // 
             this.servMgmtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.servMgmtBox.Controls.Add(this.pluginsBtn);
-            this.servMgmtBox.Controls.Add(this.button1);
+            this.servMgmtBox.Controls.Add(this.changeServerEngineBtn);
             this.servMgmtBox.Controls.Add(this.easyManagementBtn);
             this.servMgmtBox.Controls.Add(this.stopBtn);
             this.servMgmtBox.Controls.Add(this.startBtn);
@@ -152,17 +152,17 @@ namespace ServCreator
             this.pluginsBtn.Visible = false;
             this.pluginsBtn.Click += new System.EventHandler(this.pluginsBtn_Click);
             // 
-            // button1
+            // changeServerEngineBtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(6, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Change Server Engine";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.changeServerEngineBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.changeServerEngineBtn.ForeColor = System.Drawing.Color.Black;
+            this.changeServerEngineBtn.Location = new System.Drawing.Point(6, 166);
+            this.changeServerEngineBtn.Name = "changeServerEngineBtn";
+            this.changeServerEngineBtn.Size = new System.Drawing.Size(145, 23);
+            this.changeServerEngineBtn.TabIndex = 8;
+            this.changeServerEngineBtn.Text = "Change Server Engine";
+            this.changeServerEngineBtn.UseVisualStyleBackColor = true;
+            this.changeServerEngineBtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // easyManagementBtn
             // 
@@ -296,7 +296,7 @@ namespace ServCreator
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button changeServerEngineBtn;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button pluginsBtn;
     }

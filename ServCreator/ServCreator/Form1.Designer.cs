@@ -40,18 +40,18 @@ namespace ServCreator
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 30);
+            this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 17);
+            this.label1.Size = new System.Drawing.Size(294, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Load existing server or create a new one:";
             // 
             // createBtn
             // 
             this.createBtn.ForeColor = System.Drawing.Color.Black;
-            this.createBtn.Location = new System.Drawing.Point(176, 50);
+            this.createBtn.Location = new System.Drawing.Point(197, 44);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(64, 25);
+            this.createBtn.Size = new System.Drawing.Size(64, 22);
             this.createBtn.TabIndex = 2;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@ namespace ServCreator
             // loadBtn
             // 
             this.loadBtn.ForeColor = System.Drawing.Color.Black;
-            this.loadBtn.Location = new System.Drawing.Point(106, 50);
+            this.loadBtn.Location = new System.Drawing.Point(127, 44);
             this.loadBtn.Name = "loadBtn";
-            this.loadBtn.Size = new System.Drawing.Size(64, 25);
+            this.loadBtn.Size = new System.Drawing.Size(64, 22);
             this.loadBtn.TabIndex = 4;
             this.loadBtn.Text = "Load";
             this.loadBtn.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@ namespace ServCreator
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(36, 50);
+            this.button1.Location = new System.Drawing.Point(57, 44);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 25);
+            this.button1.Size = new System.Drawing.Size(64, 22);
             this.button1.TabIndex = 5;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,22 +87,23 @@ namespace ServCreator
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(276, 104);
+            this.ClientSize = new System.Drawing.Size(319, 92);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.loadBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(292, 143);
+            this.MaximumSize = new System.Drawing.Size(335, 131);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(292, 143);
+            this.MinimumSize = new System.Drawing.Size(335, 131);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServManager for Minecraft";

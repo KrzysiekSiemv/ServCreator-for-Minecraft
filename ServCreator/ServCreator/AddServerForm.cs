@@ -44,7 +44,7 @@ namespace ServCreator
                 StreamWriter configWriter = new StreamWriter(serverPathBox.Text + "\\servmanager.srv");
                 configWriter.Write(JsonConvert.SerializeObject(server));
                 configWriter.Close();
-                MessageBox.Show("Server " + serverNameBox.Text + " has been added. You'll be moved to Control Panel");
+                MessageBox.Show("Server " + serverNameBox.Text + " has been added. You'll be moved to Control Panel", "Server added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ControlPanelForm controlPanel = new ControlPanelForm(serverPathBox.Text + "\\servmanager.srv");
                 controlPanel.Show();
