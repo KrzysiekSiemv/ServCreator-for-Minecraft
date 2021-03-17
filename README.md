@@ -1,4 +1,5 @@
 # ServManager for Minecraft
+![GitHub all releases](https://img.shields.io/github/downloads/KrzysiekSiemv/ServCreator-for-Minecraft/total)
 ServManager is a server manager for Minecraft local servers, that are running on Windows. It has easy creator, manager and updater. If you have any idea or you've found a bug, write about it on Issues.
 <br><br>
 Required: .NET Framework 4.7; Java SE Runtime Environment (any version).<br>
